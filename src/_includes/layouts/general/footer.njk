@@ -1,0 +1,43 @@
+  <div class="footer">
+    <div class="container">
+      {% set navPages = collections.all | eleventyNavigation %}
+        <div class="myLogo">
+          {%- for elemento in navPages %}
+            {% if elemento.key === "index" %}
+            <a href="{{ elemento.url | url }}">
+              {{ elemento.title }}
+            </a>
+            {% endif %}
+          {%- endfor %}
+        </div>
+        <div class = "RRSS">
+          <div><a href="https://www.behance.net/koal_art" target:"_blank"><i class="fab fa-behance-square"></i></a></div>
+          <div><a href="https://www.instagram.com/koal_art/" target:"_blank"><i class="fab fa-instagram-square"></i></a></div>
+          <div><a href="https://www.artstation.com/koal_art" target:"_blank"><i class="fab fa-artstation"></i></a></div>
+          <div><a href="https://github.com/koalba" target:"_blank"><i class="fab fa-github-square"></i></a></div>
+          <div><a href="https://www.linkedin.com/in/albagar/" target:"_blank"><i class="fab fa-linkedin"></i></a></div>
+        </div>
+        <div class="nav">
+          {%- for elemento in navPages %}
+            {% if elemento.key != "index" %}
+            <a href="{{ elemento.url | url }}"
+              {% if elemento.url == page.url %} class="active"{% endif %}
+            >
+              {{ elemento.title }}
+            </a>
+            {% endif %}
+          {%- endfor %}
+        </div>
+    </div>
+  </div>
+
+  <script src="/assets/scripts/VariablesGlobales.js"></script>
+  <script src="/assets/scripts/MyProjectsURL.js"></script>
+  <script src="/assets/scripts/Open_Project.js"></script>
+  <script src="/assets/scripts/filterProjects.js"></script>
+  <script src="/assets/scripts/shuffle.js"></script>
+  <script src="/assets/scripts/CareerPath.js"></script>
+  <script src="/assets/scripts/MyButtons.js"></script>
+
+  </body>
+</html>

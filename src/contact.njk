@@ -1,0 +1,32 @@
+---
+layout: layouts/full.njk
+title: Contacto
+eleventyNavigation:
+  key: contact
+  title: Contact
+  order: 4
+---
+
+<section id = "contact">
+  <div class = "contact_text grid">
+    <h1 class = "text-display col-12">WANNA WORK TOGETHER?</h1>
+  </div>
+  <div class="contact_form">
+    <form action="/action_page.php" class="">
+      <label for="fname" class="text-subheader">FULL NAME:</label><br>
+      <input type="text" id="fname" name="fname" value="" placeholder="Jane Doe"><br>
+      <label for="fname" class="text-subheader">EMAIL:</label><br>
+      <input type="text" id="fname" name="fname" value="" placeholder="janedoe@gmail.com"><br>
+      <label for="message" class="text-subheader">MESSAGE:</label><br>
+      <textarea name="textarea" rows="10" cols="50" placeholder="What do you want to tell me?"></textarea><br>
+      <input type="submit" value="SEND" class="contact_button text-subheader">
+    </form>
+  </div>
+  <div class = "contact_image">
+    <img src="../assets/images/Contact_Img.png" alt = "">
+  </div>
+</section>
+
+<section id = "myPorfolio">
+  {% include "components/porfolioButton.njk" %}
+</section>

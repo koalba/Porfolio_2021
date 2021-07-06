@@ -1,0 +1,50 @@
+---
+layout: layouts/full.njk
+title: Projects
+eleventyNavigation:
+  key: projects
+  title: Projects
+  order: 2
+---
+<section id = "porfolio_type">
+  {% include "components/porfolioButton.njk" %}
+</section>
+
+<section id = "porfolio_img">
+  <div class = "container grid">
+
+    {% for elemento in projects %}
+      {% set projectClass = "" %}
+      {% set projectSize = "" %}
+      {% if elemento.categoria === "twoD" %}
+        {% set projectClass = "item_twoD" %}
+      {% elseif elemento.categoria === "threeD" %}
+        {% set projectClass = "item_threeD" %}
+        {% elseif elemento.categoria === "web" %}
+          {% set projectClass = "item_web" %}
+      {% endif %}
+      {% if elemento.size === "cuad" %}
+        {% set projectSize = "col-3 col-md-5 col-sm-2 col-xs-6 col-xxs-4" %}
+      {% elseif elemento.size === "rect" %}
+        {% set projectSize = "col-6 col-md-10 col-sm-4 col-xs-6" %}
+      {% endif %}
+
+
+      <div class="Projects {{projectClass}} {{projectSize}}" data-number = "{{elemento.num}}">
+        <img src="../assets/images/{{elemento.pre}}{{elemento.imagen}}" alt="">
+      </div>
+
+    {% endfor %}
+
+    <div class = "modal">
+      <span class = "modal_bkg">
+      </span>
+        <div class="modal_container">
+          <div class = "modal_panel">
+          </div>
+        </div>
+      <span class="modal_close"><i class="fas fa-times"></i></span>
+    </div>
+
+  </div>
+</section>

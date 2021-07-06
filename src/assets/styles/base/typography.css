@@ -1,0 +1,106 @@
+/* General tipografía */
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.5;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/* Escala tipográfica */
+
+.text-jumbo {
+  font-size: var(--text-jumbo);
+  font-weight: var(--regular);
+}
+
+.text-display {
+  font-size: var(--text-display);
+  font-weight: var(--extrabold);
+}
+
+.text-headline {
+  font-size: var(--text-headline);
+  font-weight: var(--extrabold);
+}
+
+.text-title {
+  font-size: var(--text-title);
+  font-weight: var(--extrabold);
+}
+
+.text-subheader {
+  font-size: var(--text-subheader);
+  font-weight: var(--regular);
+}
+
+.text-body {
+  font-size: var(--text-base);
+  font-weight: var(--regular);
+}
+
+.text-note {
+  font-size: var(--text-note);
+  font-weight: var(--regular);
+}
+
+.text-caption {
+  font-size: var(--text-caption);
+  font-weight: var(--regular);
+}
+
+.text-small {
+  font-size: var(--text-2xs);
+  font-weight: var(--regular);
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .text-jumbo {
+    font-size: var(--text-jumbo-s);
+    font-weight: var(--regular);
+  }
+
+  .text-display {
+    font-size: var(--text-display-s);
+    font-weight: var(--extrabold);
+  }
+
+  .text-headline {
+    font-size: var(--text-headline-s);
+    font-weight: var(--extrabold);
+  }
+
+  .text-title {
+    font-size: var(--text-title-s);
+    font-weight: var(--extrabold);
+  }
+
+  .text-subheader {
+    font-size: var(--text-subheader-s);
+    font-weight: var(--regular);
+  }
+
+  .text-body {
+    font-size: var(--text-body-s);
+    font-weight: var(--regular);
+  }
+
+  .text-note {
+    font-size: var(--text-note-s);
+    font-weight: var(--regular);
+  }
+
+  .text-caption {
+    font-size: var(--text-caption-s);
+    font-weight: var(--regular);
+  }
+
+  .text-small {
+    font-size: var(--text-2xs);
+    font-weight: var(--regular);
+    text-transform: uppercase;
+  }
+}

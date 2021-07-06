@@ -1,0 +1,25 @@
+.nav {
+  font-size: var(--text-base);
+  /* font-size: var(--text-subheader); */
+}
+
+.myLogo {
+  font-weight: var(--extrabold);
+  font-size: var(--text-subheader);
+}
+
+.nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin-right: 10px;
+  display: inline-block;
+  opacity: 0.75;
+  transition: all ease-in-out 0.2s;
+}
+.nav a:hover {
+  opacity: 1;
+}
+
+.nav a.active {
+  border-bottom: 2px solid;
+}

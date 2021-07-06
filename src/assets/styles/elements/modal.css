@@ -1,0 +1,175 @@
+.modal {
+  display: none;
+  z-index: 9999;
+}
+
+.open_modal {
+  display: block;
+  position: relative;
+}
+
+.modal .modal_bkg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--dark-grey);
+  z-index: 9;
+  opacity: 0.75;
+}
+
+.modal .modal_container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  height: 90vh;
+  background-color: var(--white);
+  border-radius: 5px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.modal .modal_panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--white);
+  border-radius: 5px;
+  z-index: 10;
+  padding: 0 var(--spacer-l);
+  margin: var(--spacer-m) 0 var(--spacer-xl) 0;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.modal .modal_panel .modal_panel_images {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.modal .modal_panel img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding-bottom: var(--spacer-m);
+  align-self: flex-end;
+}
+
+.modal .modal_panel .bigImage {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 0 var(--spacer-s) var(--spacer-m) var(--spacer-s);
+  align-self: flex-end;
+}
+
+.modal .modal_panel .wallpaperImage {
+  max-width: 33%;
+  margin: 0 auto;
+  padding: 0 var(--spacer-s) var(--spacer-m) var(--spacer-s);
+  align-self: flex-end;
+}
+
+/* .modal .modal_panel img:last-child {
+  padding-bottom: 0;
+}
+
+.modal .modal_panel .bigImage[data-img="twoLastBig"]:nth-last-child(-n + 2) {
+  padding-bottom: 0;
+} */
+
+.modal .modal_panel img:first-of-type {
+  margin-top: var(--spacer-m);
+}
+
+.modal .modal_panel .text-headline {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--green);
+  text-decoration: underline;
+  margin-bottom: 0;
+}
+
+.modal .modal_panel[data-class="twoD"] .text-headline {
+  color: var(--pink);
+}
+
+.modal .modal_panel[data-class="web"] .text-headline {
+  color: var(--blue);
+}
+
+.modal .modal_panel[data-class="threeD"] .text-headline {
+  color: var(--green);
+}
+
+.modal .modal_panel .text-body {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--grey);
+  text-decoration: none;
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 1px solid var(--white);
+  opacity: 0.75;
+  transition: all ease-in-out 0.1s;
+}
+
+.modal .modal_panel a:hover {
+  border-bottom: 1px solid var(--grey);
+}
+
+.modal .modal_close {
+  z-index: 10;
+  position: fixed;
+  top: var(--spacer-l);
+  right: 16vw;
+  padding: var(--spacer-s);
+  font-size: 25px;
+  line-height: 0;
+  color: var(--grey);
+  opacity: 0.5;
+  transition: all ease-in-out 0.15s;
+}
+
+.modal .modal_close:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.modal_panel .shuffle_modal_button {
+  position: fixed;
+  bottom: var(--spacer-l);
+  left: 50%;
+  user-select: none;
+  font-weight: var(--extrabold);
+  color: var(--white);
+  background-color: var(--green);
+  padding: 0.3rem 2.5rem;
+  border-radius: 50px;
+  transform-origin: center center;
+  transform: translate(-50%, 50%);
+  box-shadow: 0px 0px 0px 0px var(--dark-green);
+  transition: all ease-in-out 0.2s;
+  margin: 0 auto;
+}
+
+.modal_panel .shuffle_modal_button:hover {
+  padding: 0.3rem 3.25rem;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.modal_panel .shuffle_modal_button:active {
+  background-color: var(--dark-green);
+  padding: 0.3rem 2.5rem;
+  opacity: 1;
+}

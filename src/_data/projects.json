@@ -1,0 +1,263 @@
+[
+  {
+    "nombre": "Aloy's Bow 3D Model - Horizon Zero Dawn",
+    "pre": "Projects/00/",
+    "imagen": "00_Icon.jpg",
+    "categoria": "threeD",
+    "size": "cuad",
+    "nov": "old",
+    "num": "00"
+  },
+  {
+    "nombre": "3D Model - Arenales del Sol",
+    "pre": "Projects/01/",
+    "imagen": "01_Icon.jpg",
+    "categoria": "threeD",
+    "size": "rect",
+    "nov": "old",
+    "num": "01"
+  },
+  {
+    "nombre": "ChessMess - Game Maker's toolkit Jam 2018",
+    "pre": "Projects/02/",
+    "imagen": "02_Icon.jpg",
+    "categoria": "threeD",
+    "size": "rect",
+    "nov": "new",
+    "num": "02"
+  },
+  {
+    "nombre": "3D Character Model - DOMESTIKA Course",
+    "pre": "Projects/03/",
+    "imagen": "03_Icon.jpg",
+    "categoria": "threeD",
+    "size": "cuad",
+    "nov": "new",
+    "num": "03"
+  },
+  {
+    "nombre": "Mother's Day Card Design",
+    "pre": "Projects/04/",
+    "imagen": "04_Icon.jpg",
+    "categoria": "twoD",
+    "size": "cuad",
+    "nov": "old",
+    "num": "04"
+  },
+  {
+    "nombre": "Final Degree Project - 3D Dystopia",
+    "pre": "Projects/05/",
+    "imagen": "05_Icon.jpg",
+    "categoria": "threeD",
+    "size": "cuad",
+    "nov": "old",
+    "num": "05"
+  },
+  {
+    "nombre": "Brawl Stars Fanart",
+    "pre": "Projects/06/",
+    "imagen": "06_Icon.jpg",
+    "categoria": "twoD",
+    "size": "cuad",
+    "nov": "old",
+    "num": "06"
+  },
+  {
+    "nombre": "JS Game - DOMESTIKA Course",
+    "pre": "Projects/07/",
+    "imagen": "07_Icon.jpg",
+    "categoria": "web",
+    "size": "rect",
+    "nov": "new",
+    "num": "07"
+  },
+  {
+    "nombre": "3D Model of an Ireland Building",
+    "pre": "Projects/08/",
+    "imagen": "08_Icon.jpg",
+    "categoria": "threeD",
+    "size": "cuad",
+    "nov": "old",
+    "num": "08"
+  },
+  {
+    "nombre": "KM de Pizza - Contest Submission",
+    "pre": "Projects/09/",
+    "imagen": "09_Icon.jpg",
+    "categoria": "twoD",
+    "size": "cuad",
+    "nov": "old",
+    "num": "09"
+  },
+  {
+    "nombre": "Game Jam Madrid",
+    "pre": "Projects/10/",
+    "imagen": "10_Icon.jpg",
+    "categoria": "threeD",
+    "size": "rect",
+    "nov": "old",
+    "num": "10"
+  },
+  {
+    "nombre": "3D Model of my old room",
+    "pre": "Projects/11/",
+    "imagen": "11_Icon.jpg",
+    "categoria": "threeD",
+    "size": "cuad",
+    "nov": "old",
+    "num": "11"
+  },
+  {
+    "nombre": "3D Model for Imaginary Olympics",
+    "pre": "Projects/12/",
+    "imagen": "12_Icon.jpg",
+    "categoria": "threeD",
+    "size": "rect",
+    "nov": "old",
+    "num": "12"
+  },
+  {
+    "nombre": "Lovebird Wallpaper Illustration",
+    "pre": "Projects/13/",
+    "imagen": "13_Icon.jpg",
+    "categoria": "twoD",
+    "size": "cuad",
+    "nov": "old",
+    "num": "13"
+  },
+  {
+    "nombre": "3D Model of a Barcelona Chair",
+    "pre": "Projects/14/",
+    "imagen": "14_Icon.jpg",
+    "categoria": "threeD",
+    "size": "cuad",
+    "nov": "old",
+    "num": "14"
+  },
+  {
+    "nombre": "First Design for an Interactive Porfolio",
+    "pre": "Projects/15/",
+    "imagen": "15_Icon.jpg",
+    "categoria": "web",
+    "size": "rect",
+    "nov": "old",
+    "num": "15"
+  },
+  {
+    "nombre": "3D Model of a Glass Bottle Design",
+    "pre": "Projects/16/",
+    "imagen": "16_Icon.jpg",
+    "categoria": "threeD",
+    "size": "cuad",
+    "nov": "old",
+    "num": "16"
+  },
+  {
+    "nombre": "3D Model and Hand Texture of a Sextant",
+    "pre": "Projects/17/",
+    "imagen": "17_Icon.jpg",
+    "categoria": "threeD",
+    "size": "cuad",
+    "nov": "old",
+    "num": "17"
+  },
+  {
+    "nombre": "3D Model of a Glass of Mana & Health",
+    "pre": "Projects/18/",
+    "imagen": "18_Icon.jpg",
+    "categoria": "threeD",
+    "size": "rect",
+    "nov": "old",
+    "num": "18"
+  },
+  {
+    "nombre": "3D Model of a Koala inside a Present",
+    "pre": "Projects/19/",
+    "imagen": "19_Icon.jpg",
+    "categoria": "threeD",
+    "size": "cuad",
+    "nov": "old",
+    "num": "19"
+  },
+  {
+    "nombre": "Nier Automata Illustration",
+    "pre": "Projects/20/",
+    "imagen": "20_Icon.jpg",
+    "categoria": "twoD",
+    "size": "rect",
+    "nov": "old",
+    "num": "20"
+  },
+  {
+    "nombre": "3D Modular Environment - Sci-fi Spaceship",
+    "pre": "Projects/21/",
+    "imagen": "21_Icon.jpg",
+    "categoria": "threeD",
+    "size": "rect",
+    "nov": "old",
+    "num": "21"
+  },
+  {
+    "nombre": "Hufflepuff Illustration",
+    "pre": "Projects/22/",
+    "imagen": "22_Icon.jpg",
+    "categoria": "twoD",
+    "size": "cuad",
+    "nov": "old",
+    "num": "22"
+  },
+  {
+    "nombre": "Composition and Illumination of a Room",
+    "pre": "Projects/23/",
+    "imagen": "23_Icon.jpg",
+    "categoria": "threeD",
+    "size": "rect",
+    "nov": "old",
+    "num": "23"
+  },
+  {
+    "nombre": "Taco-Koala (Takoala) Illustration",
+    "pre": "Projects/24/",
+    "imagen": "24_Icon.jpg",
+    "categoria": "twoD",
+    "size": "cuad",
+    "nov": "new",
+    "num": "24"
+  },
+  {
+    "nombre": "Tamagotchi Illustration",
+    "pre": "Projects/25/",
+    "imagen": "25_Icon.jpg",
+    "categoria": "twoD",
+    "size": "cuad",
+    "nov": "old",
+    "num": "25"
+  },
+  {
+    "nombre": "Design and Layout of my Old Porfolio",
+    "pre": "Projects/26/",
+    "imagen": "26_Icon.jpg",
+    "categoria": "web",
+    "size": "cuad",
+    "nov": "old",
+    "num": "26"
+  },
+  {
+    "nombre": "Marketing Illustration for Katharsis",
+    "pre": "Projects/27/",
+    "imagen": "27_Icon.jpg",
+    "categoria": "twoD",
+    "size": "cuad",
+    "nov": "old",
+    "num": "27"
+  },
+  {
+    "nombre": "Porfolio Design",
+    "pre": "Projects/28/",
+    "imagen": "28_Icon.jpg",
+    "categoria": "web",
+    "size": "cuad",
+    "nov": "old",
+    "num": "28"
+  }
+]

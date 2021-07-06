@@ -1,0 +1,49 @@
+.button {
+  font-weight: var(--extrabold);
+  background-color: var(--lighter-green);
+  width: 30%;
+  margin-top: var(--spacer-l);
+  transition: all ease-in-out 0.2s;
+}
+
+.button_left {
+  border-radius: 0 50px 50px 0;
+  text-align: right;
+}
+
+.button_right {
+  position: absolute;
+  right: 0;
+  border-radius: 50px 0 0 50px;
+  text-align: left;
+}
+
+.button.button_right p {
+  margin: 0;
+  padding: 0.85rem;
+  padding-left: 2rem;
+}
+
+.button:hover {
+  width: 31%;
+  cursor: pointer;
+}
+
+.button p {
+  padding: 0.85rem;
+  padding-right: 2rem;
+  color: var(--green);
+  line-height: var(--text-subheader);
+}
+
+.button.shuffle_button {
+  background-color: var(--lighter-yellow);
+}
+
+.button.shuffle_button p {
+  color: var(--yellow);
+}
+
+.button.aboutme_button {
+  margin-top: 0;
+}

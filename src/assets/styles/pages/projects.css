@@ -1,0 +1,108 @@
+/* --------- PROJECT IMAGES --------- */
+
+#porfolio_img .grid {
+  grid-auto-flow: dense;
+}
+
+#porfolio_img .Projects {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: var(--spacer-m);
+  transition: all ease-in-out 0.2s;
+  position: relative;
+  display: none;
+}
+
+#porfolio_img .Projects.activeImg {
+  display: block;
+}
+
+#porfolio_img .Projects.item_twoD {
+  background-color: var(--pink);
+}
+
+#porfolio_img .Projects.item_web {
+  background-color: var(--blue);
+}
+
+#porfolio_img .Projects.item_threeD {
+  background-color: var(--green);
+}
+
+#porfolio_img .Projects img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: all ease-in-out 0.2s;
+}
+
+#porfolio_img .projectText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  color: var(--white);
+  opacity: 0;
+  text-transform: uppercase;
+  transition: all ease-in-out 0.2s;
+}
+
+#porfolio_img .Projects:hover img {
+  opacity: 0.25;
+}
+
+#porfolio_img .Projects:hover .projectText {
+  opacity: 1;
+}
+
+#porfolio_img .Projects:hover {
+  -webkit-box-shadow: inset 0px 0px 50px 10px rgba(0, 15, 93, 0.15);
+  box-shadow: inset 0px 0px 50px 10px rgba(0, 15, 93, 0.15);
+  cursor: pointer;
+}
+
+#porfolio_img {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: var(--spacer-m);
+}
+
+#porfolio_img::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5%;
+  height: 100%;
+  background-color: var(--green);
+}
+
+#porfolio_img::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.5%;
+  height: 100%;
+  background-color: var(--green);
+}
+
+#porfolio_img[data-class="twoD"]::before,
+#porfolio_img[data-class="twoD"]::after {
+  background-color: var(--pink);
+}
+
+#porfolio_img[data-class="web"]::before,
+#porfolio_img[data-class="web"]::after {
+  background-color: var(--blue);
+}
+
+#porfolio_img[data-class="threeD"]::before,
+#porfolio_img[data-class="threeD"]::after {
+  background-color: var(--green);
+}

@@ -1,0 +1,79 @@
+---
+layout: layouts/full.njk
+title: Inicio
+eleventyNavigation:
+  key: index
+  title: ALBA G.
+---
+<section id = "hero">
+  <div class = "hero_text grid">
+    <p class = "text-jumbo col-12">HELLO!</p>
+    <h1 class = "aboutme_button text-display col-12">I'M ALBA GARCÍA</h1>
+    <h2 class = "text-title col-12">Graphic Designer</h2>
+  </div>
+  <div class = "hero_image">
+    <img src="assets/images/Portada_Img.png" alt = "">
+  </div>
+  {% for elemento in buttons %}
+  {% if elemento.place === "hero" %}
+    <div class="text-subheader button {{elemento.buttonClass}} {{elemento.position}}">
+      <p>{{elemento.innerText}}</p>
+    </div>
+    <div class="Projects new col-3" data-number = "{{elemento.num}}">
+      <img src="../assets/images/{{elemento.pre}}{{elemento.imagen}}" alt="">
+    </div>
+  {% endif %}
+  {% endfor %}
+  <div class = "hero_title">
+    <p>New Projects</p>
+    <span></span>
+  </div>
+</section>
+
+<section id = "newProjects" class = "grid">
+  {% for elemento in projects %}
+  {% if elemento.nov === "new" %}
+    <div class="Projects new col-3" data-number = "{{elemento.num}}">
+      <img src="../assets/images/{{elemento.pre}}{{elemento.imagen}}" alt="">
+    </div>
+  {% endif %}
+  {% endfor %}
+  <div class = "modal">
+    <span class = "modal_bkg">
+    </span>
+      <div class="modal_container">
+        <div class = "modal_panel">
+        </div>
+      </div>
+    <span class="modal_close"><i class="fas fa-times"></i></span>
+  </div>
+</section>
+
+<section id = "myPorfolio">
+  {% include "components/porfolioButton.njk" %}
+</section>
+
+<section id = "shuffle">
+  <div class = "shuffle_title">
+    <span></span>
+    <p>Porfolio</p>
+  </div>
+  <div class = "shuffle_image">
+    <img src="assets/images/Shuffle_Img.png" alt = "">
+  </div>
+  <div class = "shuffle_text grid">
+    <p class = "text-display col-12">PORFOLIO
+    <br> VENDING MACHINE</p>
+    <p class = "text-title col-12">Hit the button for a random project!</p>
+  </div>
+  {% for elemento in buttons %}
+  {% if elemento.place === "shuffle" %}
+    <div class="text-subheader button {{elemento.buttonClass}} {{elemento.position}}">
+      <p>{{elemento.innerText}}</p>
+    </div>
+    <div class="Projects new col-3" data-number = "{{elemento.num}}">
+      <img src="../assets/images/{{elemento.pre}}{{elemento.imagen}}" alt="">
+    </div>
+  {% endif %}
+  {% endfor %}
+</section>

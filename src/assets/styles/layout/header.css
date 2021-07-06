@@ -1,0 +1,39 @@
+body {
+  position: relative;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: none;
+  padding-top: var(--spacer-s);
+  padding-bottom: var(--spacer-s);
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: none;
+}
+
+.header.bkg_projects {
+  background-color: var(--green);
+  position: relative;
+}
+
+.header.bkg_projects[data-class="threeD"] {
+  background-color: var(--green);
+  position: relative;
+}
+.header.bkg_projects[data-class="twoD"] {
+  background-color: var(--pink);
+  position: relative;
+}
+.header.bkg_projects[data-class="web"] {
+  background-color: var(--blue);
+  position: relative;
+}

@@ -1,0 +1,108 @@
+#contact {
+  position: relative;
+  height: 100vh;
+  max-height: 100vh;
+  background: var(--green);
+  background: var(--green-gradient);
+  padding-top: 8%;
+}
+
+#contact .contact_image {
+  position: absolute;
+  min-width: 50%;
+  bottom: 0;
+  right: 0;
+}
+
+#contact .contact_image img {
+  display: block;
+  height: 90vh;
+  float: right;
+}
+
+#contact .contact_text {
+  margin: 0 10%;
+  width: max-content;
+}
+
+#contact :is(.text-jumbo, .text-subheader) {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  color: var(--light-green);
+  letter-spacing: 1px;
+}
+
+#contact .text-jumbo {
+  margin-left: -0.5rem;
+  line-height: 125px;
+}
+
+#contact .text-display {
+  color: var(--lighter-green);
+  line-height: 55px;
+  text-decoration: none;
+  border-bottom: solid 7px rgba(176, 213, 116, 0);
+  transition: all ease-in-out 0.2s;
+}
+
+#contact .contact_button {
+  position: absolute;
+  left: 0;
+  font-weight: var(--extrabold);
+  background-color: var(--lighter-green);
+  width: 30%;
+  border-radius: 0 50px 50px 0;
+  text-align: right;
+  margin-top: var(--spacer-l);
+  padding: 0.85rem;
+  padding-right: 2rem;
+  color: var(--green);
+  line-height: var(--text-subheader);
+  border: none;
+  transition: all ease-in-out 0.2s;
+}
+
+#contact .contact_button:hover {
+  width: 31%;
+  cursor: pointer;
+}
+
+#contact .contact_form {
+  margin: 0 10.5%;
+  width: 100%;
+}
+
+#contact .contact_form input:not(.contact_button),
+#contact .contact_form textarea {
+  font-family: var(--font-family);
+  font-size: var(--text-body);
+  font-weight: var(--regular);
+  border: none;
+  padding: 0.75rem;
+  background-color: var(--lighter-green);
+  color: var(--dark-green);
+  border-radius: 5px;
+  width: 40%;
+  height: 30px;
+}
+
+#contact .contact_form input:not(.contact_button) {
+  margin-bottom: var(--spacer-s);
+}
+
+#contact .contact_form textarea {
+  height: 120px;
+  resize: none;
+}
+
+#contact .contact_form input::placeholder,
+#contact .contact_form textarea::placeholder {
+  color: var(--green);
+  opacity: 0.75;
+}
+
+#contact .contact_form input:focus,
+#contact .contact_form textarea:focus {
+  outline: none;
+}

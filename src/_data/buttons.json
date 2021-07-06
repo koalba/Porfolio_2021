@@ -1,0 +1,20 @@
+[
+  {
+    "place": "hero",
+    "innerText": "CONTACT ME!",
+    "position": "button_left",
+    "buttonClass": "hero_button"
+  },
+  {
+    "place": "shuffle",
+    "innerText": "Let's Go!",
+    "position": "button_right",
+    "buttonClass": "shuffle_button"
+  },
+  {
+    "place": "aboutme",
+    "innerText": "CONTACT ME!",
+    "position": "button_right",
+    "buttonClass": "aboutme_button"
+  }
+]

@@ -1,0 +1,31 @@
+html {
+  /* Familias tipográficas */
+  --font-family: "Raleway", sans-serif;
+  --regular: 400;
+  --bold: 700;
+  --extrabold: 800;
+
+  /* Regular: 400; + Italic
+  Bold: 700; + Italic
+  ExtraBold: 800; */
+
+  /* Escala base */
+  --text-caption: 12px;
+  --text-note: 14px;
+  --text-base: 16px;
+  --text-subheader: 24px;
+  --text-title: 30px;
+  --text-headline: 36px;
+  --text-display: 55px;
+  --text-jumbo: 130px;
+
+  /* Escala dispositivos pequeños */
+  --text-caption-s: 12px;
+  --text-note-s: 14px;
+  --text-base-s: 16px;
+  --text-subheader-s: 20px;
+  --text-title-s: 24px;
+  --text-headline-s: 30px;
+  --text-display-s: 36px;
+  --text-jumbo-s: 80px;
+}

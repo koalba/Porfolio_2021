@@ -1,0 +1,46 @@
+html {
+  /* Variables de color PRINCIPALES */
+  --yellow: #ffe36e;
+  --green: #b0d574;
+  --pink: #ff8491;
+  --blue: #8ad3ec;
+  --dark-grey: #222222;
+  --grey: #494949;
+
+  /* Variables de color SECUNDARIAS*/
+
+  --white: #fff;
+
+  /* ----------- LUCES ----------- */
+  /* Texto secundario sobre color */
+  --light-yellow: #fffcee;
+  --light-green: #edf2c5;
+  --light-pink: #ffc1c7;
+  --light-blue: #c1efff;
+
+  /* Texto principal sobre color */
+  --lighter-yellow: var(--white);
+  --lighter-green: #fefff2;
+  --lighter-pink: #fff5f6;
+  --lighter-blue: #f5fcff;
+
+  /* -------- SOMBRAS ------- */
+  --dark-yellow: #ffbc4e;
+  --dark-green: #96b662;
+  --dark-pink: #e77682;
+  --dark-blue: #71b0c5;
+
+  /* Gradientes */
+  --green-gradient: linear-gradient(
+    145deg,
+    rgba(186, 223, 127, 1) 0%,
+    rgba(176, 213, 116, 1) 50%,
+    rgba(170, 207, 110, 1) 100%
+  );
+
+  --yellow-gradient: linear-gradient(
+    45deg,
+    rgba(255, 221, 101, 1) 0%,
+    rgba(255, 227, 110, 1) 100%
+  );
+}

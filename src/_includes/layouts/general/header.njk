@@ -1,0 +1,40 @@
+{% set navPages = collections.all | eleventyNavigation %}
+
+{% if page.url === "/projects/" %}
+  {% set bkg_color = "bkg_projects" %}
+{% elseif page.url != "/projects/" %}
+  {% set bkg_color = "" %}
+{% endif %}
+
+
+<div class="header {{bkg_color}}">
+
+  <div class="container">
+  {% set navPages = collections.all | eleventyNavigation %}
+
+    <div class="nav myLogo">
+      {% for elemento in navPages %}
+        {% if elemento.key === "index" %}
+        <a href="{{ elemento.url | url }}"
+          {% if elemento.url == page.url %} class="active"{% endif %}
+        >
+          {{ elemento.title }}
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="nav">
+      {% for elemento in navPages %}
+        {% if elemento.key != "index" %}
+        <a href="{{ elemento.url | url }}"
+          {% if elemento.url == page.url %} class="active"{% endif %}
+        >
+          {{ elemento.title }}
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+</div>

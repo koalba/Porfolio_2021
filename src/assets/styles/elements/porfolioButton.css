@@ -1,0 +1,141 @@
+#myPorfolio,
+#porfolio_type {
+  padding: var(--spacer-l) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#porfolio_type .myPorfolio_button p {
+  line-height: 45px;
+}
+
+.myPorfolio_button {
+  font-size: var(--text-title);
+  font-weight: var(--extrabold);
+  line-height: var(--text-title);
+  text-align: center;
+  user-select: none;
+  transition: all ease-in-out 0.2s;
+  flex: 1;
+}
+
+.myPorfolio_button p {
+  margin: 2rem 0;
+}
+
+.web-button {
+  border-radius: 0 5px 5px 0;
+  background-color: var(--blue);
+  color: var(--lighter-blue);
+  box-shadow: 0px 0px 0px 0px var(--dark-blue);
+}
+
+.web-button:hover {
+  box-shadow: 0px 10px 0px 0px var(--dark-blue);
+  transform: translateY(-10px);
+  cursor: pointer;
+  transition: all ease-in-out 0.1s;
+}
+
+.web-button:active {
+  box-shadow: 0px 0px 0px 0px var(--dark-blue);
+  transform: translateY(0);
+  cursor: pointer;
+}
+
+.threeD-button {
+  border-radius: 5px;
+  background-color: var(--green);
+  color: var(--lighter-green);
+  box-shadow: 0px 0px 0px 0px var(--dark-green);
+  margin: 0 var(--spacer-m);
+}
+
+.threeD-button:hover {
+  box-shadow: 0px 10px 0px 0px var(--dark-green);
+  transform: translateY(-10px);
+  cursor: pointer;
+  transition: all ease-in-out 0.1s;
+}
+
+.threeD-button:active {
+  box-shadow: 0px 0px 0px 0px var(--dark-green);
+  transform: translateY(0);
+  cursor: pointer;
+}
+
+.twoD-button {
+  border-radius: 5px 0 0 5px;
+  background-color: var(--pink);
+  color: var(--lighter-pink);
+  box-shadow: 0px 0px 0px 0px var(--dark-pink);
+}
+
+.twoD-button:hover {
+  box-shadow: 0px 10px 0px 0px var(--dark-pink);
+  transform: translateY(-10px);
+  cursor: pointer;
+  transition: all ease-in-out 0.1s;
+}
+
+.twoD-button:active {
+  box-shadow: 0px 0px 0px 0px var(--dark-pink);
+  transform: translateY(0);
+  cursor: pointer;
+  transition: all ease-in-out 0.1s;
+}
+
+#porfolio_type .active {
+  font-size: 45px;
+  pointer-events: none;
+}
+
+#porfolio_type .web-button.active {
+  color: var(--blue);
+  background-color: var(--lighter-blue);
+}
+
+#porfolio_type .threeD-button.active {
+  color: var(--green);
+  background-color: var(--lighter-green);
+}
+
+#porfolio_type .twoD-button.active {
+  color: var(--pink);
+  background-color: var(--lighter-pink);
+}
+
+@media (max-width: 900px) {
+  .myPorfolio_button {
+    --porfolioButton-Size: 3vw;
+    font-size: var(--porfolioButton-Size);
+    line-height: var(--porfolioButton-Size);
+  }
+}
+
+@media (max-width: 700px) {
+  #myPorfolio,
+  #porfolio_type {
+    display: grid;
+    grid-template-columns: var(--grid-main);
+    grid-auto-rows: min-content;
+    grid-gap: 0 var(--grid-gap);
+  }
+
+  .threeD-button {
+    margin: var(--spacer-m) 0;
+  }
+
+  .myPorfolio_button {
+    font-size: var(--text-title);
+    line-height: var(--text-title);
+  }
+
+  .twoD-button,
+  .threeD-button,
+  .web-button {
+    border-radius: 0;
+  }
+}

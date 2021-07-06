@@ -1,0 +1,206 @@
+.noscroll {
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#hero {
+  position: relative;
+  height: 100vh;
+  max-height: 100vh;
+  background: var(--green);
+  background: var(--green-gradient);
+  padding-top: 11%;
+}
+
+#hero .hero_image {
+  position: absolute;
+  min-width: 50%;
+  bottom: 0;
+  right: 0;
+}
+
+#hero .hero_image img {
+  display: block;
+  height: 90vh;
+  float: right;
+}
+
+#hero .hero_text {
+  margin: 0 10%;
+  width: max-content;
+}
+
+#hero :is(.text-jumbo, .text-title) {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  color: var(--light-green);
+  letter-spacing: 1px;
+}
+
+#hero .text-jumbo {
+  margin-left: -0.5rem;
+  line-height: 125px;
+}
+
+#hero .text-display {
+  color: var(--lighter-green);
+  line-height: 55px;
+  text-decoration: none;
+  border-bottom: solid 7px rgba(176, 213, 116, 0);
+  transition: all ease-in-out 0.2s;
+}
+
+#hero .text-display:hover {
+  color: var(--white);
+  border-bottom: solid 7px;
+  cursor: pointer;
+}
+
+#hero .hero_title {
+  position: absolute;
+  width: max-content;
+  bottom: 0;
+  left: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--lighter-green);
+}
+
+#hero .hero_title:hover {
+  cursor: pointer;
+}
+
+#hero .hero_title:hover span {
+  height: 40px;
+}
+
+#hero .hero_title p {
+  line-height: var(--text-base);
+  margin-bottom: var(--spacer-s);
+}
+
+#hero .hero_title span {
+  width: 1.85px;
+  height: 45px;
+  background-color: var(--lighter-green);
+  transition: all ease-in-out 0.2s;
+}
+
+/*--------------NEW PROJECTS---------------*/
+
+#newProjects {
+  padding-top: var(--spacer-l);
+  position: relative;
+}
+
+#newProjects .Projects.new {
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
+  transform: scale(1);
+  overflow: hidden;
+  transition: all ease-in-out 0.2s;
+}
+
+#newProjects .Projects:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.Projects:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+#newProjects .Projects.new img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*--------------SHUFFLE---------------*/
+
+#shuffle {
+  background: var(--yellow);
+  background: var(--yellow-gradient);
+  position: relative;
+  height: 100vh;
+  max-height: 100vh;
+  padding-top: 11%;
+}
+
+#shuffle .shuffle_image {
+  min-width: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#shuffle .shuffle_image img {
+  display: block;
+  height: 90vh;
+  float: left;
+}
+
+#shuffle .shuffle_text {
+  margin: 0 -10%;
+  width: 100%;
+  text-align: right;
+}
+
+#shuffle .shuffle_text p {
+  margin: 0;
+}
+
+#shuffle .text-title {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  color: var(--light-yellow);
+  letter-spacing: 1px;
+}
+
+#shuffle .text-display {
+  color: var(--lighter-yellow);
+  line-height: 55px;
+  margin-right: 0.5rem !important;
+}
+
+#shuffle .shuffle_title {
+  position: absolute;
+  width: max-content;
+  top: 0;
+  right: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--lighter-yellow);
+}
+
+#shuffle .shuffle_title:hover {
+  cursor: pointer;
+}
+
+#shuffle .shuffle_title:hover span {
+  height: 40px;
+}
+
+#shuffle .shuffle_title p {
+  line-height: var(--text-base);
+  padding-top: 0.5rem;
+  margin-bottom: var(--spacer-s);
+}
+
+#shuffle .shuffle_title span {
+  width: 1.85px;
+  height: 45px;
+  background-color: var(--lighter-green);
+  transition: all ease-in-out 0.2s;
+}

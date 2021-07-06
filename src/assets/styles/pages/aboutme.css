@@ -1,0 +1,352 @@
+#aboutme {
+  background-image: url("../../images/AboutMe_Wallpaper2.png"),
+    var(--green-gradient);
+  background-size: contain;
+  background-blend-mode: multiply;
+  background-position: left center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  max-height: 100vh;
+  padding-top: 11%;
+}
+
+#aboutme .aboutme_text {
+  width: 100%;
+  text-align: left;
+}
+
+#aboutme .aboutme_text div {
+  margin: 0 10%;
+  justify-self: end;
+  width: min-content;
+}
+
+#aboutme .aboutme_text div p {
+  margin: 0;
+  width: max-content;
+}
+
+#aboutme .aboutme_text div p:last-child {
+  width: 100%;
+}
+
+#aboutme .aboutme_text .text-subheader {
+  margin: 0;
+  padding: 0.5rem 0 0 0;
+  font-weight: normal;
+  color: var(--light-green);
+  line-height: 1.85rem;
+  text-align: justify;
+}
+
+#aboutme .text-display {
+  color: var(--lighter-green);
+  line-height: 55px;
+  margin-right: 0.5rem !important;
+}
+
+#aboutme .aboutme_title {
+  position: absolute;
+  width: max-content;
+  bottom: 0;
+  left: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--lighter-green);
+}
+
+#aboutme .aboutme_title:hover {
+  cursor: pointer;
+}
+
+#aboutme .aboutme_title:hover span {
+  height: 40px;
+}
+
+#aboutme .aboutme_title p {
+  line-height: var(--text-base);
+  padding-top: 0.5rem;
+  margin-bottom: var(--spacer-s);
+}
+
+#aboutme .aboutme_title span {
+  width: 1.85px;
+  height: 45px;
+  background-color: var(--lighter-green);
+  transition: all ease-in-out 0.2s;
+}
+
+#aboutme .aboutme_hobbies {
+  width: min-content;
+  justify-self: end;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: var(--spacer-xs) 10% var(--spacer-m) 0;
+}
+
+#aboutme .aboutme_hobbies li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  margin: 1rem;
+}
+
+#aboutme .aboutme_hobbies li img {
+  padding: 0 1rem;
+  mix-blend-mode: hard-light;
+  filter: contrast(115%);
+}
+
+#aboutme .aboutme_hobbies .text-note {
+  padding-top: var(--spacer-s);
+  line-height: var(--text-note);
+  color: var(--light-green);
+  width: 90px;
+}
+
+#aboutme .aboutme_hobbies li:first-child .text-note {
+  width: 80px;
+}
+
+/* -------------CAREER PATH-------------- */
+
+#careerpath {
+  background: var(--yellow-gradient);
+  position: relative;
+  padding: var(--spacer-xl) 0;
+  height: 100vh;
+  position: relative;
+}
+
+#careerpath .career_icongroup {
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  justify-content: space-around;
+  color: var(--white);
+  margin: 0;
+  padding: 0 6%;
+  z-index: 1;
+}
+
+#careerpath .career_icongroup .career_icon {
+  position: relative;
+  display: inline-block;
+  width: 8%;
+  font-size: 3.5vw;
+  text-align: center;
+  border: 5px solid var(--white);
+  border-radius: 50%;
+  display: inline-block;
+  background-color: var(--yellow);
+  transform-origin: center center;
+  transform: scale(1);
+  transition: all ease-in-out 0.2s;
+}
+
+#careerpath .career_icongroup .career_icon:hover {
+  cursor: pointer;
+}
+
+#careerpath .career_icongroup .career_icon .dummy {
+  margin-top: 100%;
+}
+
+#careerpath .career_icongroup .career_icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#careerpath .career_icongroup .path_00 {
+  font-size: 4vw;
+}
+
+#careerpath .career_icongroup[data-class="path_01"] .path_00,
+#careerpath .career_icongroup[data-class="path_02"] :is(.path_00, .path_01),
+#careerpath
+  .career_icongroup[data-class="path_03"]
+  :is(.path_00, .path_01, .path_02),
+#careerpath
+  .career_icongroup[data-class="path_04"]
+  :is(.path_00, .path_01, .path_02, .path_03) {
+  background-color: var(--pink);
+  border: 5px solid var(--pink);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#careerpath .career_icongroup .path_01 i {
+  margin-left: 3%;
+}
+
+#careerpath .career_icongroup .path_03 i {
+  margin-left: -3%;
+  margin-top: -2%;
+}
+
+#careerpath .career_icongroup .career_icon.career_active {
+  transform: scale(1.5);
+  background-color: var(--pink);
+  border: 5px solid var(--pink);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#careerpath .career_icongroup::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1.25rem;
+  width: 75%;
+  background-color: var(--white);
+  z-index: -1;
+}
+
+#careerpath .career_icongroup::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 15%;
+  height: 1.25rem;
+  width: 0%;
+  background-color: var(--pink);
+  z-index: -1;
+  transition: all ease-in-out 0.4s;
+}
+
+#careerpath .career_icongroup[data-class="path_00"]::after {
+  width: 0%;
+}
+
+#careerpath .career_icongroup[data-class="path_01"]::after {
+  width: 17%;
+}
+
+#careerpath .career_icongroup[data-class="path_02"]::after {
+  width: 35%;
+}
+
+#careerpath .career_icongroup[data-class="path_03"]::after {
+  width: 53%;
+}
+
+#careerpath .career_icongroup[data-class="path_04"]::after {
+  width: 70%;
+}
+
+#careerpath .career_modal {
+  position: relative;
+  background-color: var(--white);
+  padding: var(--spacer-l);
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: var(--spacer-xl);
+  /* width: 55vw; */
+}
+
+#careerpath .career_modal::before {
+  content: "";
+  border-style: solid;
+  border-width: 40px 50px 40px 0;
+  border-color: transparent var(--white) transparent transparent;
+  position: absolute;
+  right: auto;
+  left: auto;
+  bottom: -10%;
+  transform: rotate(-90deg) translate(-50%, -37%);
+}
+
+#careerpath .career_modal[data-class="path_00"] {
+  grid-column: 2 / span 8;
+}
+
+#careerpath .career_modal[data-class="path_00"]::before {
+  left: 10.5%;
+}
+
+#careerpath .career_modal[data-class="path_01"] {
+  grid-column: 2 / span 8;
+}
+
+#careerpath .career_modal[data-class="path_01"]::before {
+  left: 36.5%;
+}
+
+#careerpath .career_modal[data-class="path_02"] {
+  grid-column: 3 / span 8;
+}
+
+#careerpath .career_modal[data-class="path_02"]::before {
+  left: 50.5%;
+}
+
+#careerpath .career_modal[data-class="path_03"] {
+  grid-column: 4 / span 8;
+}
+
+#careerpath .career_modal[data-class="path_03"]::before {
+  right: 31%;
+}
+
+#careerpath .career_modal[data-class="path_04"] {
+  grid-column: 4 / span 8;
+}
+
+#careerpath .career_modal[data-class="path_04"]::before {
+  right: 4%;
+}
+
+#careerpath .text-body {
+  position: absolute;
+  width: max-content;
+  color: var(--pink);
+  position: absolute;
+  left: 50%;
+  bottom: -50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+}
+
+#careerpath .career_active .text-body {
+  opacity: 1;
+}
+
+#careerpath .text-title {
+  padding: 1rem 0 0 0;
+  margin: 0;
+  /* color: var(--grey); */
+  color: var(--light-pink);
+  font-weight: var(--regular);
+}
+
+#careerpath .text-title a {
+  color: inherit;
+  opacity: 1;
+  transition: all ease-in-out 0.2s;
+}
+
+#careerpath .text-title a:hover {
+  color: var(--pink);
+}
+
+#careerpath .text-display {
+  line-height: 55px;
+  color: var(--pink);
+  padding: 0;
+  margin: 0;
+}
+
+#careerpath .text-headline {
+  color: var(--light-pink);
+  line-height: var(--text-headline);
+  padding-bottom: var(--spacer-m);
+  margin: 0;
+}
