@@ -1,5 +1,7 @@
 function checkLocation() {
   if (myLocation === window.location.origin) {
+    console.log("Inside Index");
+
     document
       .querySelector(".aboutme_button")
       .addEventListener("click", openAboutMe, false);
@@ -50,6 +52,7 @@ function checkLocation() {
 checkLocation();
 
 console.log(window.location.origin);
+console.log(myLocation);
 
 function openNewProjects() {
   location.href = "#";
