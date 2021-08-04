@@ -49,6 +49,8 @@ function checkLocation() {
 
 checkLocation();
 
+console.log(window.location.origin);
+
 function openNewProjects() {
   location.href = "#";
   location.href = "#newProjects";
