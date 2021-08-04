@@ -104,7 +104,7 @@ function filterProjects() {
   }
 }
 
-if (myLocation === "http://localhost:4000/projects/") {
+if (myLocation === window.location.origin + "/projects/") {
   projectButtonsNewPage();
   filterProjects();
 }

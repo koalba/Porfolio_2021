@@ -1,7 +1,7 @@
 let cursorX = 0;
 var screenWidth = window.innerWidth * 0.1;
 
-if (myLocation === "http://localhost:4000/aboutme/") {
+if (myLocation === window.location.origin + "/aboutme/") {
   openCareerModal("0");
 
   document

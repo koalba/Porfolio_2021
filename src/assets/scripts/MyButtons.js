@@ -1,5 +1,5 @@
 function checkLocation() {
-  if (myLocation === "http://localhost:4000/") {
+  if (myLocation === window.location.origin) {
     document
       .querySelector(".aboutme_button")
       .addEventListener("click", openAboutMe, false);
@@ -23,7 +23,7 @@ function checkLocation() {
     document
       .querySelector(".shuffle_title")
       .addEventListener("click", openNewProjects, false);
-  } else if (myLocation === "http://localhost:4000/aboutme/") {
+  } else if (myLocation === window.location.origin + "/aboutme/") {
     document.querySelectorAll(".myPorfolio_button").forEach(function (element) {
       element.addEventListener("click", checkProjectType, false);
     });
@@ -39,8 +39,8 @@ function checkLocation() {
     document.querySelectorAll(".career_icon").forEach(function (element) {
       element.addEventListener("click", openCareerLink, false);
     });
-  } else if (myLocation === "http://localhost:4000/contact/") {
-  } else if (myLocation === "http://localhost:4000/projects/") {
+  } else if (myLocation === window.location.origin + "/contact/") {
+  } else if (myLocation === window.location.origin + "/projects/") {
     document.querySelectorAll(".myPorfolio_button").forEach(function (element) {
       element.addEventListener("click", projectButtons, false);
     });
