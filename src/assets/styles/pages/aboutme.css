@@ -120,19 +120,46 @@
   background: var(--yellow-gradient);
   position: relative;
   padding: var(--spacer-xl) 0;
-  height: 100vh;
   position: relative;
+}
+
+#careerpath .career_container {
+  align-items: center;
+  width: 100%;
+  margin-bottom: var(--spacer-m);
+  padding: 0 8%;
 }
 
 #careerpath .career_icongroup {
   display: flex;
+  position: relative;
   align-items: center;
   flex-flow: row;
-  justify-content: space-around;
+  justify-content: space-between;
   color: var(--white);
   margin: 0;
-  padding: 0 6%;
-  z-index: 1;
+  padding: 0;
+}
+
+#careerpath .career_icongroup .career_bkg_slide {
+  position: absolute;
+  width: 100%;
+  height: 1.25rem;
+  background-color: var(--white);
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+#careerpath .career_icongroup .career_slide {
+  position: absolute;
+  width: 0%;
+  height: 1.25rem;
+  background-color: var(--pink);
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  transition: all ease-in-out 0.3s;
 }
 
 #careerpath .career_icongroup .career_icon {
@@ -147,7 +174,7 @@
   background-color: var(--yellow);
   transform-origin: center center;
   transform: scale(1);
-  transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.3s;
 }
 
 #careerpath .career_icongroup .career_icon:hover {
@@ -176,7 +203,10 @@
   :is(.path_00, .path_01, .path_02),
 #careerpath
   .career_icongroup[data-class="path_04"]
-  :is(.path_00, .path_01, .path_02, .path_03) {
+  :is(.path_00, .path_01, .path_02, .path_03),
+#careerpath
+  .career_icongroup[data-class="path_05"]
+  :is(.path_00, .path_01, .path_02, .path_03, .path_04) {
   background-color: var(--pink);
   border: 5px solid var(--pink);
   border-radius: 50%;
@@ -198,48 +228,7 @@
   border: 5px solid var(--pink);
   border-radius: 50%;
   display: inline-block;
-}
-
-#careerpath .career_icongroup::before {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 1.25rem;
-  width: 75%;
-  background-color: var(--white);
-  z-index: -1;
-}
-
-#careerpath .career_icongroup::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 15%;
-  height: 1.25rem;
-  width: 0%;
-  background-color: var(--pink);
-  z-index: -1;
-  transition: all ease-in-out 0.4s;
-}
-
-#careerpath .career_icongroup[data-class="path_00"]::after {
-  width: 0%;
-}
-
-#careerpath .career_icongroup[data-class="path_01"]::after {
-  width: 17%;
-}
-
-#careerpath .career_icongroup[data-class="path_02"]::after {
-  width: 35%;
-}
-
-#careerpath .career_icongroup[data-class="path_03"]::after {
-  width: 53%;
-}
-
-#careerpath .career_icongroup[data-class="path_04"]::after {
-  width: 70%;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.15);
 }
 
 #careerpath .career_modal {
@@ -249,59 +238,37 @@
   border-radius: 15px;
   text-align: center;
   margin-bottom: var(--spacer-xl);
+  grid-column: 3 / span 8;
+  z-index: 1;
   /* width: 55vw; */
 }
 
 #careerpath .career_modal::before {
   content: "";
-  border-style: solid;
-  border-width: 40px 50px 40px 0;
-  border-color: transparent var(--white) transparent transparent;
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
   position: absolute;
-  right: auto;
-  left: auto;
-  bottom: -10%;
-  transform: rotate(-90deg) translate(-50%, -37%);
+  top: 50%;
+  left: 0;
+  transform: translate(-30%, -50%);
+  background-color: var(--white);
+  z-index: -1;
 }
 
-#careerpath .career_modal[data-class="path_00"] {
-  grid-column: 2 / span 8;
-}
-
-#careerpath .career_modal[data-class="path_00"]::before {
-  left: 10.5%;
-}
-
-#careerpath .career_modal[data-class="path_01"] {
-  grid-column: 2 / span 8;
-}
-
-#careerpath .career_modal[data-class="path_01"]::before {
-  left: 36.5%;
-}
-
-#careerpath .career_modal[data-class="path_02"] {
-  grid-column: 3 / span 8;
-}
-
-#careerpath .career_modal[data-class="path_02"]::before {
-  left: 50.5%;
-}
-
-#careerpath .career_modal[data-class="path_03"] {
-  grid-column: 4 / span 8;
-}
-
-#careerpath .career_modal[data-class="path_03"]::before {
-  right: 31%;
-}
-
-#careerpath .career_modal[data-class="path_04"] {
-  grid-column: 4 / span 8;
-}
-
-#careerpath .career_modal[data-class="path_04"]::before {
-  right: 4%;
+#careerpath .career_modal::after {
+  content: "";
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(30%, -50%);
+  background-color: var(--white);
+  z-index: -1;
 }
 
 #careerpath .text-body {

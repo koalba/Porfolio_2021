@@ -116,8 +116,7 @@
 }
 
 @media (max-width: 700px) {
-  #myPorfolio,
-  #porfolio_type {
+  #myPorfolio {
     display: grid;
     grid-template-columns: var(--grid-main);
     grid-auto-rows: min-content;
@@ -137,5 +136,53 @@
   .threeD-button,
   .web-button {
     border-radius: 0;
+  }
+
+  #porfolio_type {
+    padding: var(--spacer-2xs) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  #porfolio_type .myPorfolio_button {
+    font-size: var(--text-note);
+    font-weight: var(--extrabold);
+    line-height: var(--text-note);
+  }
+
+  #porfolio_type .myPorfolio_button p {
+    margin: 1rem 0;
+    line-height: var(--text-note);
+  }
+
+  #porfolio_type .active {
+    font-size: var(--text-note);
+    pointer-events: none;
+  }
+
+  #porfolio_type .web-button.active {
+    color: var(--blue);
+    background-color: var(--lighter-blue);
+  }
+
+  #porfolio_type .threeD-button.active {
+    color: var(--green);
+    background-color: var(--lighter-green);
+  }
+
+  #porfolio_type .twoD-button.active {
+    color: var(--pink);
+    background-color: var(--lighter-pink);
+  }
+
+  #porfolio_type .twoD-button:hover,
+  #porfolio_type .threeD-button:hover,
+  #porfolio_type .web-button:hover {
+    box-shadow: none;
+    transform: translateY(0);
+    cursor: pointer;
+    transition: all ease-in-out 0.1s;
   }
 }

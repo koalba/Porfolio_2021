@@ -5,7 +5,7 @@ if (myLocation === "http://localhost:4000/aboutme/") {
   openCareerModal("0");
 
   document
-    .querySelector(".career_icongroup")
+    .querySelector(".career_container")
     .addEventListener("mousemove", (e) => {
       cursorX = Math.round(e.clientX * 0.1);
 
@@ -14,15 +14,21 @@ if (myLocation === "http://localhost:4000/aboutme/") {
 }
 
 function openCareerModal(cursor) {
-  var cero_per = percentage(20, screenWidth);
-  var one_per = percentage(40, screenWidth);
-  var two_per = percentage(60, screenWidth);
-  var three_per = percentage(80, screenWidth);
-  var four_per = percentage(100, screenWidth);
-
   var careerModal = document.querySelector(".career_modal");
+  var careerSlide = document.querySelector(".career_slide");
   var careerIconGroup = document.querySelector(".career_icongroup");
   var careerIcons = document.querySelectorAll(".career_icon");
+  var itemSize = careerIconGroup.getBoundingClientRect().width * 0.1 - 13;
+  var iconPercentage = [];
+
+  for (var i = 0; i < careerIcons.length - 1; i++) {
+    var iconNumber = 100 / (careerIcons.length - 1);
+    iconPercentage.push(percentage(iconNumber * (i + 1), Math.round(itemSize)));
+  }
+
+  var myMiddle = iconPercentage[0] / 2;
+  var mySides = (screenWidth - itemSize) / 2;
+  iconPercentage.unshift(0);
 
   careerModal.innerHTML = "";
 
@@ -30,18 +36,92 @@ function openCareerModal(cursor) {
     careerIcons[i].classList.remove("career_active");
   }
 
-  if (cursor <= cero_per) {
-    loadOne(careerModal, careerIconGroup, careerIcons);
-  } else if (cursor > cero_per && cursor <= one_per) {
-    loadTwo(careerModal, careerIconGroup, careerIcons);
-  } else if (cursor > one_per && cursor <= two_per) {
-    loadThree(careerModal, careerIconGroup, careerIcons);
-  } else if (cursor > two_per && cursor <= three_per) {
-    loadFour(careerModal, careerIconGroup, careerIcons);
-  } else if (cursor > three_per && cursor <= four_per) {
-    loadFive(careerModal, careerIconGroup, careerIcons);
-  } else {
-    loadOne(careerModal, careerIconGroup, careerIcons);
+  for (var i = 0; i < iconPercentage.length; i++) {
+    var compressedPer = compressNumbers(iconPercentage[i], itemSize);
+    if (
+      cursor - mySides >= 0 &&
+      cursor - mySides < iconPercentage[1] - myMiddle &&
+      i == 0
+    ) {
+      loadOne(careerModal, careerSlide, careerIcons, compressedPer);
+      return;
+    } else if (
+      cursor - mySides >= iconPercentage[i] - myMiddle &&
+      cursor - mySides < iconPercentage[i] + myMiddle
+    ) {
+      if (i == 1) {
+        for (var i = 0; i < careerIcons.length; i++) {
+          careerIcons[i].classList.remove("career_active");
+        }
+        loadTwo(
+          careerModal,
+          careerSlide,
+          careerIcons,
+          careerIconGroup,
+          compressedPer
+        );
+        return;
+      } else if (i == 2) {
+        for (var i = 0; i < careerIcons.length; i++) {
+          careerIcons[i].classList.remove("career_active");
+        }
+        loadThree(
+          careerModal,
+          careerSlide,
+          careerIcons,
+          careerIconGroup,
+          compressedPer
+        );
+        return;
+      } else if (i == 3) {
+        for (var i = 0; i < careerIcons.length; i++) {
+          careerIcons[i].classList.remove("career_active");
+        }
+        loadFour(
+          careerModal,
+          careerSlide,
+          careerIcons,
+          careerIconGroup,
+          compressedPer
+        );
+        return;
+      } else if (i == 4) {
+        for (var i = 0; i < careerIcons.length; i++) {
+          careerIcons[i].classList.remove("career_active");
+        }
+        loadFive(
+          careerModal,
+          careerSlide,
+          careerIcons,
+          careerIconGroup,
+          compressedPer
+        );
+        return;
+      } else if (i == 5) {
+        for (var i = 0; i < careerIcons.length; i++) {
+          careerIcons[i].classList.remove("career_active");
+        }
+        loadSix(
+          careerModal,
+          careerSlide,
+          careerIcons,
+          careerIconGroup,
+          compressedPer
+        );
+        return;
+      }
+    } else if (cursor - mySides > itemSize) {
+      loadSix(
+        careerModal,
+        careerSlide,
+        careerIcons,
+        careerIconGroup,
+        compressedPer
+      );
+    } else {
+      compressedPer = 0;
+      loadOne(careerModal, careerSlide, careerIcons, compressedPer);
+    }
   }
 }
 
@@ -56,59 +136,75 @@ function openCareerLink() {
     window.open("https://www.grupo-sm.com/", "_blank");
   } else if (this.classList.contains("path_04") === true) {
     window.open("https://internaftis.com/", "_blank");
+  } else if (this.classList.contains("path_05") === true) {
+    window.open("https://trazos.net/", "_blank");
   }
 }
 
-function loadOne(modal, icongroup, icon) {
+function loadOne(modal, iconslide, icon, percentage) {
   icon[0].classList.add("career_active");
   modal.innerHTML =
     "<p class = 'text-headline'>2012 - 2014</p>" +
     "<p class = 'text-display'>BACHELOR OF PLASTIC ARTS, DESIGN AND IMAGE</p>" +
     "<p class = 'text-title'><a href = 'https://www.colegiosramonycajal.es/' target = '_blank'>Colegios Ramón y Cajal</a></p>";
-  modal.setAttribute("data-class", "path_00");
-  icongroup.setAttribute("data-class", "path_00");
+  iconslide.style.width = percentage + "%";
 }
 
-function loadTwo(modal, icongroup, icon) {
+function loadTwo(modal, iconslide, icon, icongroup, percentage) {
   icon[1].classList.add("career_active");
   modal.innerHTML =
     "<p class = 'text-headline'>2014 - 2015</p>" +
     "<p class = 'text-display'>MEDIA & ART + ENGLISH LEVEL CERTIFICATION C2</p>" +
     "<p class = 'text-title'><a href = 'https://www.ef.com.es/' target = '_blank'>EF International Language Centers</a>, London</p>";
-  modal.setAttribute("data-class", "path_01");
   icongroup.setAttribute("data-class", "path_01");
+  iconslide.style.width = percentage + "%";
 }
 
-function loadThree(modal, icongroup, icon) {
+function loadThree(modal, iconslide, icon, icongroup, percentage) {
   icon[2].classList.add("career_active");
   modal.innerHTML =
     "<p class = 'text-headline'>2015 - 2020</p>" +
     "<p class = 'text-display'>DEGREE IN VISUAL DESIGN OF DIGITAL CONTENTS</p>" +
     "<p class = 'text-title'><a href = 'https://www.u-tad.com/' target = '_blank'>U-Tad</a></p>";
-  modal.setAttribute("data-class", "path_02");
   icongroup.setAttribute("data-class", "path_02");
+  iconslide.style.width = percentage + "%";
 }
 
-function loadFour(modal, icongroup, icon) {
+function loadFour(modal, iconslide, icon, icongroup, percentage) {
   icon[3].classList.add("career_active");
   modal.innerHTML =
     "<p class = 'text-headline'>2 Jan 2019 - 30 June 2019</p>" +
     "<p class = 'text-display'>INTERACTIVE TECHNOLOGY COORDINATION</p>" +
     "<p class = 'text-title'>Internship - <a href = 'https://www.grupo-sm.com/' target = '_blank'>Grupo SM</a></p>";
-  modal.setAttribute("data-class", "path_03");
   icongroup.setAttribute("data-class", "path_03");
+  iconslide.style.width = percentage + "%";
 }
 
-function loadFive(modal, icongroup, icon) {
+function loadFive(modal, iconslide, icon, icongroup, percentage) {
   icon[4].classList.add("career_active");
   modal.innerHTML =
     "<p class = 'text-headline'>2020 - 2021</p>" +
     "<p class = 'text-display'>FREELANCER - FRONTEND WEB DESIGN WITH DIVI</p>" +
     "<p class = 'text-title'>Collab. with <a href = 'https://internaftis.com/' target = '_blank'>Internaftis</a></p>";
-  modal.setAttribute("data-class", "path_04");
   icongroup.setAttribute("data-class", "path_04");
+  iconslide.style.width = percentage + "%";
+}
+
+function loadSix(modal, iconslide, icon, icongroup, percentage) {
+  icon[5].classList.add("career_active");
+  modal.innerHTML =
+    "<p class = 'text-headline'>October 2021 (WIP)</p>" +
+    "<p class = 'text-display'>MASTER IN FULL STACK WEB DESIGN</p>" +
+    "<p class = 'text-title'><a href = 'https://trazos.net/' target = '_blank'>Trazos</a></p>";
+  icongroup.setAttribute("data-class", "path_05");
+  iconslide.style.width = percentage + "%";
 }
 
 function percentage(percent, total) {
   return (percent / 100) * total;
+}
+
+function compressNumbers(OldValue, OldMax) {
+  var NewValue = ((OldValue - 0) * (100 - 0)) / (OldMax - 0) + 0;
+  return Math.round(NewValue);
 }

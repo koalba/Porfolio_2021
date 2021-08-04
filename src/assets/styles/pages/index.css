@@ -169,7 +169,7 @@ html {
 #shuffle .text-display {
   color: var(--lighter-yellow);
   line-height: 55px;
-  margin-right: 0.5rem !important;
+  margin-right: 0.5rem;
 }
 
 #shuffle .shuffle_title {
@@ -203,4 +203,61 @@ html {
   height: 45px;
   background-color: var(--lighter-green);
   transition: all ease-in-out 0.2s;
+}
+
+@media only screen and (max-width: 700px) {
+  #hero {
+    padding-top: 42%;
+  }
+
+  #hero .hero_image {
+    width: 95%;
+  }
+
+  #hero .hero_image img {
+    height: auto;
+  }
+
+  #hero .hero_text {
+    margin: 0 10%;
+    white-space: nowrap;
+    width: max-content;
+  }
+
+  #hero .text-jumbo {
+    margin-left: -0.25rem;
+    line-height: 4rem;
+  }
+
+  #hero .text-display {
+    line-height: 3rem;
+    border-bottom: solid 7px;
+  }
+
+  #hero .hero_title span {
+    height: 25px;
+  }
+
+  /*--------------SHUFFLE---------------*/
+
+  #shuffle {
+    padding-top: 40%;
+  }
+
+  #shuffle .shuffle_image {
+    width: 95%;
+  }
+
+  #shuffle .shuffle_image img {
+    height: auto;
+  }
+
+  #shuffle .shuffle_text {
+    margin: 0 -5%;
+  }
+
+  #shuffle .text-display {
+    line-height: 2.25rem;
+    margin-right: 0;
+  }
 }

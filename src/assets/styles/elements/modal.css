@@ -173,3 +173,46 @@
   padding: 0.3rem 2.5rem;
   opacity: 1;
 }
+
+@media (max-width: 700px) {
+  .modal .modal_container {
+    width: 90vw;
+    height: 95vh;
+  }
+
+  .modal .modal_panel {
+    padding: 0 var(--spacer-m);
+    margin: var(--spacer-m) 0 var(--spacer-l) 0;
+  }
+
+  .modal .modal_panel .modal_panel_images {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  .modal .modal_panel :is(.bigImage, img, .wallpaperImage) {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 0 var(--spacer-m) 0;
+  }
+
+  .modal .modal_panel img:first-of-type {
+    margin-top: var(--spacer-m);
+  }
+
+  .modal .modal_panel .text-headline {
+    font-size: var(--text-subheader);
+  }
+
+  .modal .modal_close {
+    top: 4vw;
+    right: 4vw;
+    font-size: 21px;
+  }
+
+  .modal_panel .shuffle_modal_button {
+    padding: 0.3rem 1.5rem;
+  }
+}
