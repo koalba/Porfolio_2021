@@ -401,22 +401,6 @@
     padding-top: 22%;
   }
 
-  #aboutme:before {
-    content: "";
-    background-image: url("../../images/AboutMe_Wallpaper2.png"),
-      var(--green-gradient);
-    background-size: cover;
-    background-blend-mode: multiply;
-    background-position: left center;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-  }
-
   #aboutme .aboutme_text .text-subheader {
     padding: 0;
     line-height: 1.65rem;
