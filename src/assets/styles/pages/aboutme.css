@@ -405,7 +405,7 @@
     content: "";
     background-image: url("../../images/AboutMe_Wallpaper2.png"),
       var(--green-gradient);
-    background-size: contain;
+    background-size: cover;
     background-blend-mode: multiply;
     background-position: left center;
     background-repeat: no-repeat;
