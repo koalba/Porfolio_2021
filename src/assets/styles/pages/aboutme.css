@@ -18,12 +18,17 @@
 
 #aboutme .aboutme_text div {
   margin: 0 10%;
+  -ms-grid-column-align: end;
   justify-self: end;
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
 }
 
 #aboutme .aboutme_text div p {
   margin: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -48,12 +53,23 @@
 
 #aboutme .aboutme_title {
   position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   bottom: 0;
   left: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   color: var(--lighter-green);
 }
@@ -76,22 +92,42 @@
   width: 1.85px;
   height: 45px;
   background-color: var(--lighter-green);
+  -webkit-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
 
 #aboutme .aboutme_hobbies {
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
+  -ms-grid-column-align: end;
   justify-self: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
   align-items: baseline;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: var(--spacer-xs) 10% var(--spacer-m) 0;
 }
 
 #aboutme .aboutme_hobbies li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
   margin: 1rem;
@@ -100,6 +136,7 @@
 #aboutme .aboutme_hobbies li img {
   padding: 0 1rem;
   mix-blend-mode: hard-light;
+  -webkit-filter: contrast(115%);
   filter: contrast(115%);
 }
 
@@ -124,6 +161,8 @@
 }
 
 #careerpath .career_container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   margin-bottom: var(--spacer-m);
@@ -131,10 +170,19 @@
 }
 
 #careerpath .career_icongroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
   flex-flow: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   color: var(--white);
   margin: 0;
@@ -148,6 +196,8 @@
   background-color: var(--white);
   top: 50%;
   left: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
 
@@ -158,7 +208,11 @@
   background-color: var(--pink);
   top: 50%;
   left: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
+  -webkit-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
 }
 
@@ -172,8 +226,14 @@
   border-radius: 50%;
   display: inline-block;
   background-color: var(--yellow);
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
   transform-origin: center center;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
 }
 
@@ -189,6 +249,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -223,11 +285,14 @@
 }
 
 #careerpath .career_icongroup .career_icon.career_active {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
   transform: scale(1.5);
   background-color: var(--pink);
   border: 5px solid var(--pink);
   border-radius: 50%;
   display: inline-block;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -238,6 +303,8 @@
   border-radius: 15px;
   text-align: center;
   margin-bottom: var(--spacer-xl);
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 8;
   grid-column: 3 / span 8;
   z-index: 1;
   /* width: 55vw; */
@@ -252,6 +319,8 @@
   position: absolute;
   top: 50%;
   left: 0;
+  -webkit-transform: translate(-30%, -50%);
+  -ms-transform: translate(-30%, -50%);
   transform: translate(-30%, -50%);
   background-color: var(--white);
   z-index: -1;
@@ -266,6 +335,8 @@
   position: absolute;
   top: 50%;
   right: 0;
+  -webkit-transform: translate(30%, -50%);
+  -ms-transform: translate(30%, -50%);
   transform: translate(30%, -50%);
   background-color: var(--white);
   z-index: -1;
@@ -273,11 +344,15 @@
 
 #careerpath .text-body {
   position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   color: var(--pink);
   position: absolute;
   left: 50%;
   bottom: -50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   opacity: 0;
 }
@@ -297,6 +372,8 @@
 #careerpath .text-title a {
   color: inherit;
   opacity: 1;
+  -webkit-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
 
@@ -324,6 +401,21 @@
     padding-top: 22%;
   }
 
+  #aboutme:before {
+    content: "";
+    background-image: url("../../images/AboutMe_Wallpaper2.png"),
+      var(--green-gradient);
+    background-size: contain;
+    background-blend-mode: multiply;
+    background-position: left center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
   #aboutme .aboutme_text .text-subheader {
     padding: 0;
     line-height: 1.65rem;
@@ -333,6 +425,8 @@
 
   #aboutme .aboutme_title {
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 
@@ -343,14 +437,22 @@
   #aboutme .aboutme_hobbies {
     width: 100%;
     max-width: 100%;
+    -ms-grid-column-align: center;
     justify-self: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: var(--spacer-m) 10% var(--spacer-l) 0;
   }
 
   #aboutme .aboutme_hobbies li {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    width: -webkit-min-content;
+    width: -moz-min-content;
     width: min-content;
     margin: 0.25rem;
   }
@@ -376,9 +478,18 @@
   }
 
   #careerpath .grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
@@ -402,7 +513,10 @@
   }
 
   #careerpath .career_icongroup .career_icon.career_active {
+    -webkit-transform: scale(1.25);
+    -ms-transform: scale(1.25);
     transform: scale(1.25);
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
   }
 
