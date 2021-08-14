@@ -36,9 +36,15 @@ function checkLocation() {
       .querySelector(".aboutme_title")
       .addEventListener("click", openCareerPath, false);
 
-    document.querySelectorAll(".career_icon").forEach(function (element) {
-      element.addEventListener("click", openCareerLink, false);
-    });
+    if (window.innerWidth > 700) {
+      document.querySelectorAll(".career_icon").forEach(function (element) {
+        element.addEventListener("click", openCareerLink, false);
+      });
+    } else {
+      document.querySelectorAll(".career_icon").forEach(function (element) {
+        element.addEventListener("click", openCareerModal, false);
+      });
+    }
   } else if (myLocation === window.location.origin + "/contact/") {
   } else if (myLocation === window.location.origin + "/projects/") {
     document.querySelectorAll(".myPorfolio_button").forEach(function (element) {

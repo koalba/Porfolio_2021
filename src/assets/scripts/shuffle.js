@@ -18,6 +18,7 @@ function getShuffledProject(myRandomProject) {
   document.body.classList.add("noscroll");
   var myModal = document.querySelector(".modal");
   myModal.classList.add("open_modal");
+  myModal.classList.add("shuffle_modal");
 
   var mySecImages;
 

@@ -5,7 +5,7 @@
 }
 
 .footer a:visited {
-  color: inherit;
+  color: var(--grey);
 }
 
 .footer .container .myLogo a {

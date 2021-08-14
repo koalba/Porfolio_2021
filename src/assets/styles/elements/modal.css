@@ -177,12 +177,17 @@
 @media (max-width: 700px) {
   .modal .modal_container {
     width: 90vw;
-    height: 95vh;
+    height: 85vh;
+  }
+
+  .modal.shuffle_modal .modal_panel {
+    padding: 0 var(--spacer-m);
+    margin: var(--spacer-l) 0 var(--spacer-xl) 0;
   }
 
   .modal .modal_panel {
     padding: 0 var(--spacer-m);
-    margin: var(--spacer-m) 0 var(--spacer-l) 0;
+    margin: var(--spacer-l) 0 var(--spacer-l) 0;
   }
 
   .modal .modal_panel .modal_panel_images {
@@ -212,12 +217,17 @@
   }
 
   .modal .modal_close {
-    top: 3vw;
+    top: 12vw;
     right: 4vw;
     font-size: 21px;
   }
 
   .modal_panel .shuffle_modal_button {
+    padding: 0.3rem 1.5rem;
+  }
+
+  .modal_panel .shuffle_modal_button:active {
+    background-color: var(--dark-green);
     padding: 0.3rem 1.5rem;
   }
 }

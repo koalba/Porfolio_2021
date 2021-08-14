@@ -317,3 +317,120 @@
   padding-bottom: var(--spacer-m);
   margin: 0;
 }
+
+@media only screen and (max-width: 700px) {
+  #aboutme {
+    background-size: cover;
+    padding-top: 22%;
+  }
+
+  #aboutme .aboutme_text .text-subheader {
+    padding: 0;
+    line-height: 1.65rem;
+    color: var(--lighter-green);
+    text-align: left;
+  }
+
+  #aboutme .aboutme_title {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #aboutme .aboutme_title span {
+    height: 25px;
+  }
+
+  #aboutme .aboutme_hobbies {
+    width: 100%;
+    max-width: 100%;
+    justify-self: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: var(--spacer-m) 10% var(--spacer-l) 0;
+  }
+
+  #aboutme .aboutme_hobbies li {
+    justify-content: center;
+    width: min-content;
+    margin: 0.25rem;
+  }
+
+  #aboutme .aboutme_hobbies li img {
+    width: 100%;
+  }
+
+  #aboutme .aboutme_hobbies li:first-child img {
+    width: 80%;
+  }
+
+  #aboutme .aboutme_hobbies .text-note,
+  #aboutme .aboutme_hobbies li:first-child .text-note {
+    font-size: var(--text-caption-s);
+    width: 19.8vw;
+  }
+
+  /* -------------CAREER PATH-------------- */
+
+  #careerpath {
+    padding: var(--spacer-l) 0;
+  }
+
+  #careerpath .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #careerpath .career_container {
+    margin-bottom: 0;
+    padding: 0 7%;
+  }
+
+  #careerpath .career_icongroup > :is(.career_slide, .career_bkg_slide) {
+    height: 0.5rem;
+  }
+
+  #careerpath .career_icongroup .career_icon {
+    width: 13%;
+    font-size: 5vw;
+    border: 3px solid var(--white);
+  }
+
+  #careerpath .career_icongroup .path_00 {
+    font-size: 7vw;
+  }
+
+  #careerpath .career_icongroup .career_icon.career_active {
+    transform: scale(1.25);
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  #careerpath .career_modal {
+    padding: var(--spacer-m);
+    border-radius: 15px;
+    margin: 0 var(--spacer-l) var(--spacer-l) var(--spacer-l);
+  }
+
+  #careerpath .career_modal::before,
+  #careerpath .career_modal::after {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  #careerpath .text-title {
+    padding: 0.75em 0 0.75rem 0;
+    font-size: var(--text-subheader-s);
+    line-height: var(--text-subheader-s);
+  }
+
+  #careerpath .text-display {
+    font-size: var(--text-headline-s);
+    line-height: var(--text-headline-s);
+  }
+
+  #careerpath .text-headline {
+    font-size: var(--text-title-s);
+    line-height: var(--text-title-s);
+  }
+}
