@@ -84,7 +84,7 @@ p {
   }
 
   .text-body {
-    font-size: var(--text-body-s);
+    font-size: var(--text-base-s);
     font-weight: var(--regular);
   }
 

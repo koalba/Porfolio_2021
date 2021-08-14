@@ -115,8 +115,9 @@
   }
 }
 
-@media (max-width: 700px) {
+@media only screen and (max-width: 700px) {
   #myPorfolio {
+    padding: var(--spacer-m) 0;
     display: grid;
     grid-template-columns: var(--grid-main);
     grid-auto-rows: min-content;
@@ -124,7 +125,7 @@
   }
 
   .threeD-button {
-    margin: var(--spacer-m) 0;
+    margin: var(--spacer-s) 0;
   }
 
   .myPorfolio_button {

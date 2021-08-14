@@ -204,10 +204,15 @@
 
   .modal .modal_panel .text-headline {
     font-size: var(--text-subheader);
+    line-height: 1.75rem;
+  }
+
+  .modal .modal_panel .text-body {
+    padding-top: 0.5rem;
   }
 
   .modal .modal_close {
-    top: 4vw;
+    top: 3vw;
     right: 4vw;
     font-size: 21px;
   }

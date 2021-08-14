@@ -26,6 +26,7 @@
 @import url("elements/modal.css");
 @import url("elements/porfolioButton.css");
 @import url("elements/button.css");
+@import url("elements/hamburgers.css");
 
 /* Pages */
 @import url("pages/index.css");

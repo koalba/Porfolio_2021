@@ -13,6 +13,14 @@ body {
   padding-bottom: var(--spacer-s);
 }
 
+.header #pcNav {
+  display: block;
+}
+
+.header #phoneNav {
+  display: none;
+}
+
 .header .container {
   display: flex;
   align-items: center;
@@ -36,4 +44,14 @@ body {
 .header.bkg_projects[data-class="web"] {
   background-color: var(--blue);
   position: relative;
+}
+
+@media only screen and (max-width: 700px) {
+  .header #pcNav {
+    display: none;
+  }
+
+  .header #phoneNav {
+    display: inline-block;
+  }
 }

@@ -207,11 +207,11 @@ html {
 
 @media only screen and (max-width: 700px) {
   #hero {
-    padding-top: 42%;
+    padding-top: 22%;
   }
 
   #hero .hero_image {
-    width: 95%;
+    width: 85%;
   }
 
   #hero .hero_image img {
@@ -234,8 +234,78 @@ html {
     border-bottom: solid 7px;
   }
 
+  #hero .hero_title {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   #hero .hero_title span {
     height: 25px;
+  }
+
+  #hero .button {
+    margin-top: var(--spacer-m);
+  }
+
+  /*--------------NEW PROJECTS---------------*/
+
+  #newProjects {
+    padding-top: var(--spacer-m);
+    position: relative;
+  }
+
+  /*--------------SHUFFLE---------------*/
+
+  #shuffle {
+    padding-top: 20%;
+  }
+
+  #shuffle .shuffle_image {
+    width: 85%;
+  }
+
+  #shuffle .shuffle_image img {
+    height: auto;
+  }
+
+  #shuffle .shuffle_text {
+    margin: 0 -5%;
+  }
+
+  #shuffle .text-display {
+    line-height: 2.25rem;
+    margin-right: 0;
+  }
+
+  #shuffle .text-title {
+    line-height: 1.75rem;
+  }
+
+  #shuffle .shuffle_title span {
+    height: 25px;
+  }
+
+  #shuffle .shuffle_title {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  #shuffle .button {
+    margin-top: var(--spacer-m);
+  }
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  #hero {
+    padding-top: 42%;
+  }
+
+  #hero .hero_image {
+    width: 95%;
+  }
+
+  #hero .button {
+    margin-top: var(--spacer-l);
   }
 
   /*--------------SHUFFLE---------------*/
