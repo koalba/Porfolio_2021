@@ -433,7 +433,7 @@
 
   #aboutme .aboutme_hobbies {
     padding: var(--spacer-m) 5%;
-    width: 100%;
+    /* width: 100%; */
     max-width: 100%;
     -ms-grid-column-align: center;
     justify-self: center;
@@ -446,7 +446,7 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    width: 100%;
+    /* width: 100%; */
     margin: 0.25rem;
   }
 
