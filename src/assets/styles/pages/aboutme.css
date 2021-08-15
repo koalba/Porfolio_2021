@@ -449,6 +449,8 @@
     width: 100%;
     -o-object-fit: contain;
     object-fit: contain;
+    -o-object-position: bottom center;
+    object-position: bottom center;
   }
 
   #aboutme .aboutme_hobbies li:first-child img {
