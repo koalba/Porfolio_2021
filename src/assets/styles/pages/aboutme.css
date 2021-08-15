@@ -398,7 +398,7 @@
 @media only screen and (max-width: 700px) {
   #aboutme {
     background-size: cover;
-    background-image: url("../../images/Contact_Img.png"), var(--green-gradient);
+    background-image: url("../../images/AboutMe_Wallpaper2_Phone.png");
     padding-top: 22%;
   }
 
