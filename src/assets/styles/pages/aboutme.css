@@ -458,6 +458,7 @@
     min-height: auto;
     max-height: auto;
     height: auto;
+    justify-self: flex-start;
     /* -o-object-fit: contain;
     object-fit: contain;
     -o-object-position: bottom center;
