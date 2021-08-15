@@ -414,6 +414,12 @@
     text-align: left;
   }
 
+  #aboutme .aboutme_text div {
+    margin: 0;
+    padding: 0 8%;
+    width: 100%;
+  }
+
   #aboutme .aboutme_title {
     left: 50%;
     -webkit-transform: translateX(-50%);
