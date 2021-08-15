@@ -403,6 +403,10 @@
     padding-top: 22%;
   }
 
+  #aboutme .aboutme_text div {
+    justify-self: center;
+  }
+
   #aboutme .aboutme_text .text-subheader {
     padding: 0;
     line-height: 1.65rem;
@@ -422,17 +426,15 @@
   }
 
   #aboutme .aboutme_hobbies {
+    padding: 0 5%;
     width: 100%;
     max-width: 100%;
     height: auto;
     -ms-grid-column-align: center;
     justify-self: center;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin: var(--spacer-m) 10% var(--spacer-l) 0;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin: var(--spacer-m) 0 var(--spacer-l) 0;
   }
 
   #aboutme .aboutme_hobbies li {
