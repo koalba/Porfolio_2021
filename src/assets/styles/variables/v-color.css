@@ -38,33 +38,7 @@ html {
     rgba(170, 207, 110, 1) 100%
   );
 
-  --o-green-gradient: -o-linear-gradient(
-    305deg,
-    rgba(186, 223, 127, 1) 0%,
-    rgba(176, 213, 116, 1) 50%,
-    rgba(170, 207, 110, 1) 100%
-  );
-
-  --webkit-green-gradient: -webkit-linear-gradient(
-    145deg,
-    rgba(186, 223, 127, 1) 0%,
-    rgba(176, 213, 116, 1) 50%,
-    rgba(170, 207, 110, 1) 100%
-  );
-
   --yellow-gradient: linear-gradient(
-    45deg,
-    rgba(255, 221, 101, 1) 0%,
-    rgba(255, 227, 110, 1) 100%
-  );
-
-  --o-yellow-gradient: -o-linear-gradient(
-    45deg,
-    rgba(255, 221, 101, 1) 0%,
-    rgba(255, 227, 110, 1) 100%
-  );
-
-  --webkit-yellow-gradient: -webkit-linear-gradient(
     45deg,
     rgba(255, 221, 101, 1) 0%,
     rgba(255, 227, 110, 1) 100%
