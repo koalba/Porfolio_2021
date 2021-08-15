@@ -424,6 +424,7 @@
   #aboutme .aboutme_hobbies {
     width: 100%;
     max-width: 100%;
+    height: auto;
     -ms-grid-column-align: center;
     justify-self: center;
     -webkit-box-pack: start;
@@ -446,6 +447,8 @@
 
   #aboutme .aboutme_hobbies li img {
     width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
   }
 
   #aboutme .aboutme_hobbies li:first-child img {
