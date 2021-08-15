@@ -450,6 +450,7 @@
     width: -moz-min-content;
     width: min-content;
     margin: 0.25rem;
+    height: auto;
   }
 
   #aboutme .aboutme_hobbies li img {
