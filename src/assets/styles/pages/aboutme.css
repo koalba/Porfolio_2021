@@ -399,7 +399,7 @@
   #aboutme {
     background-size: cover;
     background-color: var(--green);
-    background-image: url("../../images/AboutMe_Wallpaper2_Phone.png");
+    background-image: url("../../images/AboutMe_Wallpaper2.png");
     padding-top: 22%;
   }
 
@@ -417,7 +417,7 @@
   #aboutme .aboutme_text div {
     margin: 0;
     padding: 0 8%;
-    width: 100%;
+    width: min-content;
   }
 
   #aboutme .aboutme_title {
@@ -435,7 +435,6 @@
     padding: var(--spacer-m) 5%;
     width: 100%;
     max-width: 100%;
-    height: auto;
     -ms-grid-column-align: center;
     justify-self: center;
     -ms-flex-wrap: nowrap;
