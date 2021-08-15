@@ -134,7 +134,7 @@
 }
 
 #aboutme .aboutme_hobbies li img {
-  padding: 0 1rem;
+  width: 80%;
   mix-blend-mode: hard-light;
   -webkit-filter: contrast(115%);
   filter: contrast(115%);
@@ -453,19 +453,11 @@
   }
 
   #aboutme .aboutme_hobbies li img {
-    width: 100%;
-    min-height: auto;
-    max-height: auto;
-    height: auto;
-    justify-self: flex-start;
-    /* -o-object-fit: contain;
-    object-fit: contain;
-    -o-object-position: bottom center;
-    object-position: bottom center; */
+    width: 65%;
   }
 
   #aboutme .aboutme_hobbies li:first-child img {
-    width: 80%;
+    width: 38%;
   }
 
   #aboutme .aboutme_hobbies .text-note,
