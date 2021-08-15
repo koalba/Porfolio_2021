@@ -14,8 +14,6 @@
 #aboutme .aboutme_text {
   width: 100%;
   text-align: left;
-  background-image: url("../../images/AboutMe_Wallpaper2.png"),
-    var(--green-gradient);
 }
 
 #aboutme .aboutme_text div {
@@ -400,8 +398,7 @@
 @media only screen and (max-width: 700px) {
   #aboutme {
     background-size: cover;
-    background-image: url("../../images/AboutMe_Wallpaper2_Phone.png"),
-      var(--green-gradient);
+    background-image: url("../../images/Contact_Img.png"), var(--green-gradient);
     padding-top: 22%;
   }
 
