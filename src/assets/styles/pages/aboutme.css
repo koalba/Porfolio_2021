@@ -14,6 +14,8 @@
 #aboutme .aboutme_text {
   width: 100%;
   text-align: left;
+  background-image: url("../../images/AboutMe_Wallpaper2.png"),
+    var(--green-gradient);
 }
 
 #aboutme .aboutme_text div {
