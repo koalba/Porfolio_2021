@@ -134,10 +134,15 @@
 }
 
 #aboutme .aboutme_hobbies li img {
-  width: 80%;
+  width: 75%;
+  margin-bottom: 0.5rem;
   mix-blend-mode: hard-light;
   -webkit-filter: contrast(115%);
   filter: contrast(115%);
+}
+
+#aboutme .aboutme_hobbies li:first-child img {
+  width: 60%;
 }
 
 #aboutme .aboutme_hobbies .text-note {
@@ -403,10 +408,6 @@
     padding-top: 22%;
   }
 
-  #aboutme .aboutme_text div {
-    justify-self: center;
-  }
-
   #aboutme .aboutme_text .text-subheader {
     padding: 0;
     line-height: 1.65rem;
@@ -416,6 +417,7 @@
 
   #aboutme .aboutme_text div {
     margin: 0;
+    justify-self: center;
     padding: 0 8%;
     width: min-content;
   }
@@ -453,11 +455,12 @@
   }
 
   #aboutme .aboutme_hobbies li img {
-    width: 65%;
+    width: 60%;
+    margin-bottom: 0.15rem;
   }
 
   #aboutme .aboutme_hobbies li:first-child img {
-    width: 38%;
+    width: 40%;
   }
 
   #aboutme .aboutme_hobbies .text-note,
