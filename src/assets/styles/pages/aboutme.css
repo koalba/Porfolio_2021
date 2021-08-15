@@ -459,7 +459,7 @@
   }
 
   #aboutme .aboutme_hobbies li:first-child img {
-    width: 80%;
+    /* width: 80%; */
   }
 
   #aboutme .aboutme_hobbies .text-note,
