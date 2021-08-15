@@ -451,7 +451,8 @@
   }
 
   #aboutme .aboutme_hobbies li img {
-    /* width: 100%; */
+    width: 100%;
+    min-height: auto;
     /* -o-object-fit: contain;
     object-fit: contain;
     -o-object-position: bottom center;
@@ -459,7 +460,7 @@
   }
 
   #aboutme .aboutme_hobbies li:first-child img {
-    /* width: 80%; */
+    width: 80%;
   }
 
   #aboutme .aboutme_hobbies .text-note,
