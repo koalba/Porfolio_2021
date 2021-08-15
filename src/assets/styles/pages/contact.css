@@ -22,6 +22,8 @@
 
 #contact .contact_text {
   margin: 0 10%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -43,6 +45,8 @@
   line-height: 55px;
   text-decoration: none;
   border-bottom: solid 7px rgba(176, 213, 116, 0);
+  -webkit-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
 
@@ -60,6 +64,8 @@
   color: var(--green);
   line-height: var(--text-subheader);
   border: none;
+  -webkit-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
 
@@ -94,6 +100,30 @@
 #contact .contact_form textarea {
   height: 120px;
   resize: none;
+}
+
+#contact .contact_form input::-webkit-input-placeholder,
+#contact .contact_form textarea::-webkit-input-placeholder {
+  color: var(--green);
+  opacity: 0.75;
+}
+
+#contact .contact_form input::-moz-placeholder,
+#contact .contact_form textarea::-moz-placeholder {
+  color: var(--green);
+  opacity: 0.75;
+}
+
+#contact .contact_form input:-ms-input-placeholder,
+#contact .contact_form textarea:-ms-input-placeholder {
+  color: var(--green);
+  opacity: 0.75;
+}
+
+#contact .contact_form input::-ms-input-placeholder,
+#contact .contact_form textarea::-ms-input-placeholder {
+  color: var(--green);
+  opacity: 0.75;
 }
 
 #contact .contact_form input::placeholder,

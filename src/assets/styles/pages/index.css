@@ -30,6 +30,8 @@ html {
 
 #hero .hero_text {
   margin: 0 10%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -51,6 +53,8 @@ html {
   line-height: 55px;
   text-decoration: none;
   border-bottom: solid 7px rgba(176, 213, 116, 0);
+  -webkit-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
 
@@ -62,12 +66,23 @@ html {
 
 #hero .hero_title {
   position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   bottom: 0;
   left: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   color: var(--lighter-green);
 }
@@ -89,6 +104,8 @@ html {
   width: 1.85px;
   height: 45px;
   background-color: var(--lighter-green);
+  -webkit-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
 
@@ -102,18 +119,28 @@ html {
 #newProjects .Projects.new {
   width: 100%;
   height: 100%;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
   transform-origin: center center;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
   overflow: hidden;
+  -webkit-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
 
 #newProjects .Projects:hover {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
   transform: scale(1.03);
   cursor: pointer;
 }
 
 .Projects:hover {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
   transform: scale(1.03);
   cursor: pointer;
 }
@@ -121,6 +148,7 @@ html {
 #newProjects .Projects.new img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -174,12 +202,23 @@ html {
 
 #shuffle .shuffle_title {
   position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   top: 0;
   right: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   color: var(--lighter-yellow);
 }
@@ -202,6 +241,8 @@ html {
   width: 1.85px;
   height: 45px;
   background-color: var(--lighter-green);
+  -webkit-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
 
@@ -221,6 +262,8 @@ html {
   #hero .hero_text {
     margin: 0 10%;
     white-space: nowrap;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
   }
 
@@ -236,6 +279,8 @@ html {
 
   #hero .hero_title {
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 
@@ -287,6 +332,8 @@ html {
 
   #shuffle .shuffle_title {
     right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
     transform: translateX(50%);
   }
 

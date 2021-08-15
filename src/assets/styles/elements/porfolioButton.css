@@ -1,9 +1,16 @@
 #myPorfolio,
 #porfolio_type {
   padding: var(--spacer-l) 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -16,8 +23,15 @@
   font-weight: var(--extrabold);
   line-height: var(--text-title);
   text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
+  -webkit-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
 }
 
@@ -29,18 +43,27 @@
   border-radius: 0 5px 5px 0;
   background-color: var(--blue);
   color: var(--lighter-blue);
+  -webkit-box-shadow: 0px 0px 0px 0px var(--dark-blue);
   box-shadow: 0px 0px 0px 0px var(--dark-blue);
 }
 
 .web-button:hover {
+  -webkit-box-shadow: 0px 10px 0px 0px var(--dark-blue);
   box-shadow: 0px 10px 0px 0px var(--dark-blue);
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
   transform: translateY(-10px);
   cursor: pointer;
+  -webkit-transition: all ease-in-out 0.1s;
+  -o-transition: all ease-in-out 0.1s;
   transition: all ease-in-out 0.1s;
 }
 
 .web-button:active {
+  -webkit-box-shadow: 0px 0px 0px 0px var(--dark-blue);
   box-shadow: 0px 0px 0px 0px var(--dark-blue);
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
   transform: translateY(0);
   cursor: pointer;
 }
@@ -49,19 +72,28 @@
   border-radius: 5px;
   background-color: var(--green);
   color: var(--lighter-green);
+  -webkit-box-shadow: 0px 0px 0px 0px var(--dark-green);
   box-shadow: 0px 0px 0px 0px var(--dark-green);
   margin: 0 var(--spacer-m);
 }
 
 .threeD-button:hover {
+  -webkit-box-shadow: 0px 10px 0px 0px var(--dark-green);
   box-shadow: 0px 10px 0px 0px var(--dark-green);
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
   transform: translateY(-10px);
   cursor: pointer;
+  -webkit-transition: all ease-in-out 0.1s;
+  -o-transition: all ease-in-out 0.1s;
   transition: all ease-in-out 0.1s;
 }
 
 .threeD-button:active {
+  -webkit-box-shadow: 0px 0px 0px 0px var(--dark-green);
   box-shadow: 0px 0px 0px 0px var(--dark-green);
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
   transform: translateY(0);
   cursor: pointer;
 }
@@ -70,20 +102,31 @@
   border-radius: 5px 0 0 5px;
   background-color: var(--pink);
   color: var(--lighter-pink);
+  -webkit-box-shadow: 0px 0px 0px 0px var(--dark-pink);
   box-shadow: 0px 0px 0px 0px var(--dark-pink);
 }
 
 .twoD-button:hover {
+  -webkit-box-shadow: 0px 10px 0px 0px var(--dark-pink);
   box-shadow: 0px 10px 0px 0px var(--dark-pink);
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
   transform: translateY(-10px);
   cursor: pointer;
+  -webkit-transition: all ease-in-out 0.1s;
+  -o-transition: all ease-in-out 0.1s;
   transition: all ease-in-out 0.1s;
 }
 
 .twoD-button:active {
+  -webkit-box-shadow: 0px 0px 0px 0px var(--dark-pink);
   box-shadow: 0px 0px 0px 0px var(--dark-pink);
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
   transform: translateY(0);
   cursor: pointer;
+  -webkit-transition: all ease-in-out 0.1s;
+  -o-transition: all ease-in-out 0.1s;
   transition: all ease-in-out 0.1s;
 }
 
@@ -118,8 +161,11 @@
 @media only screen and (max-width: 700px) {
   #myPorfolio {
     padding: var(--spacer-m) 0;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: var(--grid-main);
     grid-template-columns: var(--grid-main);
+    grid-auto-rows: -webkit-min-content;
     grid-auto-rows: min-content;
     grid-gap: 0 var(--grid-gap);
   }
@@ -141,9 +187,16 @@
 
   #porfolio_type {
     padding: var(--spacer-2xs) 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
   }
 
@@ -181,9 +234,14 @@
   #porfolio_type .twoD-button:hover,
   #porfolio_type .threeD-button:hover,
   #porfolio_type .web-button:hover {
+    -webkit-box-shadow: none;
     box-shadow: none;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
     transform: translateY(0);
     cursor: pointer;
+    -webkit-transition: all ease-in-out 0.1s;
+    -o-transition: all ease-in-out 0.1s;
     transition: all ease-in-out 0.1s;
   }
 }

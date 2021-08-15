@@ -13,6 +13,8 @@
   margin-right: 10px;
   display: inline-block;
   opacity: 0.75;
+  -webkit-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
 .nav a:hover {

@@ -417,8 +417,11 @@
 
   #aboutme .aboutme_text div {
     margin: 0;
+    -ms-grid-column-align: center;
     justify-self: center;
     padding: 0 8%;
+    width: -webkit-min-content;
+    width: -moz-min-content;
     width: min-content;
   }
 
