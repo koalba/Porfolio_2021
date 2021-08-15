@@ -4,35 +4,33 @@
   padding-bottom: var(--spacer-l);
 }
 
-.footer a:visited {
+.footer a:visited,
+.footer a:-webkit-any-link,
+.footer a {
   color: var(--grey);
 }
 
 .footer .container .myLogo a {
-  color: var(--grey);
   text-decoration: none;
   font-size: var(--text-title);
   transition: all ease-in-out 0.2s;
 }
 
-.footer .container .myLogo a:hover {
+.footer .container a:hover {
   color: var(--dark-green);
   cursor: pointer;
   opacity: 0.65;
+  border-bottom: 1px solid var(--dark-green);
 }
 
 .footer .nav a {
-  color: var(--grey);
   opacity: 1;
   text-decoration: none;
   transition: all ease-in-out 0.2s;
 }
 
-.footer .nav a:hover {
-  color: var(--dark-green);
-  cursor: pointer;
-  opacity: 0.65;
-  border-bottom: 1px solid var(--dark-green);
+.footer .nav .mylogo a:hover {
+  border-bottom: none;
 }
 
 .footer .RRSS {
