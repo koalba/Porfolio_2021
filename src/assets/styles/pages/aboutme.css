@@ -411,7 +411,7 @@
     padding: 0;
     line-height: 1.65rem;
     color: var(--lighter-green);
-    text-align: left;
+    text-align: justify;
   }
 
   #aboutme .aboutme_text div {
@@ -432,7 +432,7 @@
   }
 
   #aboutme .aboutme_hobbies {
-    padding: 0 5%;
+    padding: var(--spacer-m) 5%;
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -440,7 +440,7 @@
     justify-self: center;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    margin: var(--spacer-m) 0 var(--spacer-l) 0;
+    margin: 0;
   }
 
   #aboutme .aboutme_hobbies li {
