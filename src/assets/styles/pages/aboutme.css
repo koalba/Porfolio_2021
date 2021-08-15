@@ -448,7 +448,7 @@
     justify-content: center;
     width: 100%;
     margin: 0.25rem;
-    height: auto;
+    height: min-content;
   }
 
   #aboutme .aboutme_hobbies li img {
