@@ -1,8 +1,15 @@
-if (window.innerWidth > 700) {
-  let cursorX = 0;
-  var screenWidth = window.innerWidth * 0.1;
+let cursorX = 0;
+var screenWidth = window.innerWidth * 0.1;
 
-  if (myLocation === window.location.origin + "/aboutme/") {
+var careerModal = document.querySelector(".career_modal");
+var careerSlide = document.querySelector(".career_slide");
+var careerIconGroup = document.querySelector(".career_icongroup");
+var careerIcons = document.querySelectorAll(".career_icon");
+
+var compressedPer = 0;
+
+if (myLocation === window.location.origin + "/aboutme/") {
+  if (window.innerWidth > 700) {
     openCareerModal("0");
 
     document
@@ -12,13 +19,19 @@ if (window.innerWidth > 700) {
 
         openCareerModal(cursorX);
       });
+  } else {
+    loadOne(
+      careerModal,
+      careerSlide,
+      careerIcons,
+      careerIconGroup,
+      compressedPer
+    );
   }
+}
 
-  function openCareerModal(cursor) {
-    var careerModal = document.querySelector(".career_modal");
-    var careerSlide = document.querySelector(".career_slide");
-    var careerIconGroup = document.querySelector(".career_icongroup");
-    var careerIcons = document.querySelectorAll(".career_icon");
+function openCareerModal(cursor) {
+  if (window.innerWidth > 700) {
     var itemSize = careerIconGroup.getBoundingClientRect().width * 0.1 - 13;
     var iconPercentage = [];
     for (var i = 0; i < careerIcons.length - 1; i++) {
@@ -39,13 +52,19 @@ if (window.innerWidth > 700) {
     }
 
     for (var i = 0; i < iconPercentage.length; i++) {
-      var compressedPer = compressNumbers(iconPercentage[i], itemSize);
+      compressedPer = compressNumbers(iconPercentage[i], itemSize);
       if (
         cursor - mySides >= 0 &&
         cursor - mySides < iconPercentage[1] - myMiddle &&
         i == 0
       ) {
-        loadOne(careerModal, careerSlide, careerIcons, compressedPer);
+        loadOne(
+          careerModal,
+          careerSlide,
+          careerIcons,
+          careerIconGroup,
+          compressedPer
+        );
         return;
       } else if (
         cursor - mySides >= iconPercentage[i] - myMiddle &&
@@ -122,41 +141,16 @@ if (window.innerWidth > 700) {
         );
       } else {
         compressedPer = 0;
-        loadOne(careerModal, careerSlide, careerIcons, compressedPer);
+        loadOne(
+          careerModal,
+          careerSlide,
+          careerIcons,
+          careerIconGroup,
+          compressedPer
+        );
       }
     }
-  }
-
-  function openCareerLink() {
-    if (this.classList.contains("path_00") === true) {
-      window.open("https://www.colegiosramonycajal.es/", "_blank");
-    } else if (this.classList.contains("path_01") === true) {
-      window.open("https://www.ef.com.es/", "_blank");
-    } else if (this.classList.contains("path_02") === true) {
-      window.open("https://www.u-tad.com/", "_blank");
-    } else if (this.classList.contains("path_03") === true) {
-      window.open("https://www.grupo-sm.com/", "_blank");
-    } else if (this.classList.contains("path_04") === true) {
-      window.open("https://internaftis.com/", "_blank");
-    } else if (this.classList.contains("path_05") === true) {
-      window.open("https://trazos.net/", "_blank");
-    }
-  }
-} else {
-  var careerModal = document.querySelector(".career_modal");
-  var careerSlide = document.querySelector(".career_slide");
-  var careerIconGroup = document.querySelector(".career_icongroup");
-  var careerIcons = document.querySelectorAll(".career_icon");
-  var compressedPer = 0;
-  loadOne(
-    careerModal,
-    careerSlide,
-    careerIcons,
-    careerIconGroup,
-    compressedPer
-  );
-
-  function openCareerModal() {
+  } else {
     var itemSize = careerIconGroup.getBoundingClientRect().width * 0.1 - 13;
     var iconPercentage = [];
 
@@ -181,7 +175,6 @@ if (window.innerWidth > 700) {
       iconPercentage[i] = compressNumbers(iconPercentage[i], itemSize);
     }
 
-    console.log(itemSize);
     if (this.classList.contains("path_00") === true) {
       for (var i = 0; i < careerIcons.length; i++) {
         careerIcons[i].classList.remove("career_active");
@@ -269,9 +262,154 @@ if (window.innerWidth > 700) {
         careerIconGroup,
         compressedPer
       );
+      return;
     }
   }
 }
+
+function openCareerLink() {
+  if (this.classList.contains("path_00") === true) {
+    window.open("https://www.colegiosramonycajal.es/", "_blank");
+  } else if (this.classList.contains("path_01") === true) {
+    window.open("https://www.ef.com.es/", "_blank");
+  } else if (this.classList.contains("path_02") === true) {
+    window.open("https://www.u-tad.com/", "_blank");
+  } else if (this.classList.contains("path_03") === true) {
+    window.open("https://www.grupo-sm.com/", "_blank");
+  } else if (this.classList.contains("path_04") === true) {
+    window.open("https://internaftis.com/", "_blank");
+  } else if (this.classList.contains("path_05") === true) {
+    window.open("https://trazos.net/", "_blank");
+  }
+}
+// var careerModal = document.querySelector(".career_modal");
+// var careerSlide = document.querySelector(".career_slide");
+// var careerIconGroup = document.querySelector(".career_icongroup");
+// var careerIcons = document.querySelectorAll(".career_icon");
+// var compressedPer = 0;
+// loadOne(
+//   careerModal,
+//   careerSlide,
+//   careerIcons,
+//   careerIconGroup,
+//   compressedPer
+// );
+//
+// function openCareerModal() {
+//   var itemSize = careerIconGroup.getBoundingClientRect().width * 0.1 - 13;
+//   var iconPercentage = [];
+//
+//   for (var i = 0; i < careerIcons.length - 1; i++) {
+//     var iconNumber = 100 / (careerIcons.length - 1);
+//     iconPercentage.push(
+//       percentage(iconNumber * (i + 1), Math.round(itemSize))
+//     );
+//   }
+//
+//   var myMiddle = iconPercentage[0] / 2;
+//   var mySides = (screenWidth - itemSize) / 2;
+//   iconPercentage.unshift(0);
+//
+//   careerModal.innerHTML = "";
+//
+//   for (var i = 0; i < careerIcons.length; i++) {
+//     careerIcons[i].classList.remove("career_active");
+//   }
+//
+//   for (var i = 0; i < iconPercentage.length; i++) {
+//     iconPercentage[i] = compressNumbers(iconPercentage[i], itemSize);
+//   }
+//
+//   console.log(itemSize);
+//   if (this.classList.contains("path_00") === true) {
+//     for (var i = 0; i < careerIcons.length; i++) {
+//       careerIcons[i].classList.remove("career_active");
+//     }
+//     compressedPer = iconPercentage[0];
+//     loadOne(
+//       careerModal,
+//       careerSlide,
+//       careerIcons,
+//       careerIconGroup,
+//       compressedPer
+//     );
+//     return;
+//   } else if (this.classList.contains("path_01") === true) {
+//     for (var i = 0; i < careerIcons.length; i++) {
+//       careerIcons[i].classList.remove("career_active");
+//     }
+//     compressedPer = iconPercentage[1];
+//     loadTwo(
+//       careerModal,
+//       careerSlide,
+//       careerIcons,
+//       careerIconGroup,
+//       compressedPer
+//     );
+//     return;
+//   } else if (this.classList.contains("path_02") === true) {
+//     for (var i = 0; i < careerIcons.length; i++) {
+//       careerIcons[i].classList.remove("career_active");
+//     }
+//     compressedPer = iconPercentage[2];
+//     loadThree(
+//       careerModal,
+//       careerSlide,
+//       careerIcons,
+//       careerIconGroup,
+//       compressedPer
+//     );
+//     return;
+//   } else if (this.classList.contains("path_03") === true) {
+//     compressedPer = iconPercentage[3];
+//     for (var i = 0; i < careerIcons.length; i++) {
+//       careerIcons[i].classList.remove("career_active");
+//     }
+//     loadFour(
+//       careerModal,
+//       careerSlide,
+//       careerIcons,
+//       careerIconGroup,
+//       compressedPer
+//     );
+//     return;
+//   } else if (this.classList.contains("path_04") === true) {
+//     compressedPer = iconPercentage[4];
+//     for (var i = 0; i < careerIcons.length; i++) {
+//       careerIcons[i].classList.remove("career_active");
+//     }
+//     loadFive(
+//       careerModal,
+//       careerSlide,
+//       careerIcons,
+//       careerIconGroup,
+//       compressedPer
+//     );
+//     return;
+//   } else if (this.classList.contains("path_05") === true) {
+//     compressedPer = iconPercentage[5];
+//     for (var i = 0; i < careerIcons.length; i++) {
+//       careerIcons[i].classList.remove("career_active");
+//     }
+//     loadSix(
+//       careerModal,
+//       careerSlide,
+//       careerIcons,
+//       careerIconGroup,
+//       compressedPer
+//     );
+//     return;
+//   } else {
+//     compressedPer = 0;
+//     loadOne(
+//       careerModal,
+//       careerSlide,
+//       careerIcons,
+//       careerIconGroup,
+//       compressedPer
+//     );
+//   }
+// }
 
 function loadOne(modal, iconslide, icon, icongroup, percentage) {
   icon[0].classList.add("career_active");
