@@ -400,12 +400,17 @@
   margin: 0;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
   #aboutme {
     background-size: cover;
+    background-position: center center;
     background-color: var(--green);
     background-image: url("../../images/AboutMe_Wallpaper2.png");
     padding-top: 22%;
+  }
+
+  #aboutme .aboutme_text .text-display {
+    margin-bottom: 1rem;
   }
 
   #aboutme .aboutme_text .text-subheader {
@@ -419,10 +424,8 @@
     margin: 0;
     -ms-grid-column-align: center;
     justify-self: center;
-    padding: 0 8%;
-    width: -webkit-min-content;
-    width: -moz-min-content;
-    width: min-content;
+    padding: 0 14%;
+    width: 100%;
   }
 
   #aboutme .aboutme_title {
@@ -432,13 +435,10 @@
     transform: translateX(-50%);
   }
 
-  #aboutme .aboutme_title span {
-    height: 25px;
-  }
-
   #aboutme .aboutme_hobbies {
-    padding: var(--spacer-m) 5%;
+    padding: var(--spacer-m) 10%;
     /* width: 100%; */
+    width: 100%;
     max-width: 100%;
     -ms-grid-column-align: center;
     justify-self: center;
@@ -458,24 +458,22 @@
   }
 
   #aboutme .aboutme_hobbies li img {
-    width: 60%;
+    width: 50%;
     margin-bottom: 0.15rem;
   }
 
   #aboutme .aboutme_hobbies li:first-child img {
-    width: 40%;
+    width: 30%;
   }
 
-  #aboutme .aboutme_hobbies .text-note,
-  #aboutme .aboutme_hobbies li:first-child .text-note {
-    font-size: var(--text-caption-s);
-    width: 19.8vw;
+  #aboutme .button {
+    width: 50%;
   }
 
   /* -------------CAREER PATH-------------- */
 
   #careerpath {
-    padding: var(--spacer-l) 0;
+    padding: var(--spacer-xl) 0;
   }
 
   #careerpath .grid {
@@ -496,7 +494,7 @@
 
   #careerpath .career_container {
     margin-bottom: 0;
-    padding: 0 7%;
+    padding: 0 14%;
   }
 
   #careerpath .career_icongroup > :is(.career_slide, .career_bkg_slide) {
@@ -524,7 +522,7 @@
   #careerpath .career_modal {
     padding: var(--spacer-m);
     border-radius: 15px;
-    margin: 0 var(--spacer-l) var(--spacer-l) var(--spacer-l);
+    margin: 0 var(--spacer-xl) var(--spacer-l) var(--spacer-xl);
   }
 
   #careerpath .career_modal::before,
@@ -535,6 +533,82 @@
 
   #careerpath .text-title {
     padding: 0.75em 0 0.75rem 0;
+    font-size: var(--text-title-s);
+    line-height: var(--text-title-s);
+  }
+
+  #careerpath .text-display {
+    font-size: var(--text-display-s);
+    line-height: var(--text-display-s);
+  }
+
+  #careerpath .text-headline {
+    font-size: var(--text-headline-s);
+    line-height: var(--text-headline-s);
+  }
+}
+
+@media only screen and (max-width: 700px) and (orientation: portrait) {
+  #aboutme {
+    background-position: left center;
+  }
+
+  #aboutme .aboutme_text .text-display {
+    margin-bottom: 0;
+  }
+
+  #aboutme .aboutme_text div {
+    padding: 0 8%;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
+
+  #aboutme .aboutme_title span {
+    height: 25px;
+  }
+
+  #aboutme .aboutme_hobbies {
+    padding: var(--spacer-m) 5%;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
+
+  #aboutme .aboutme_hobbies li img {
+    width: 60%;
+  }
+
+  #aboutme .aboutme_hobbies li:first-child img {
+    width: 40%;
+  }
+
+  #aboutme .aboutme_hobbies .text-note,
+  #aboutme .aboutme_hobbies li:first-child .text-note {
+    font-size: var(--text-caption-s);
+    width: 19.8vw;
+  }
+
+  #aboutme .button {
+    width: 30%;
+  }
+
+  /* -------------CAREER PATH-------------- */
+
+  #careerpath {
+    padding: var(--spacer-l) 0;
+  }
+
+  #careerpath .career_container {
+    padding: 0 7%;
+  }
+
+  #careerpath .career_modal {
+    padding: var(--spacer-m);
+    margin: 0 var(--spacer-l) var(--spacer-l) var(--spacer-l);
+  }
+
+  #careerpath .text-title {
     font-size: var(--text-subheader-s);
     line-height: var(--text-subheader-s);
   }

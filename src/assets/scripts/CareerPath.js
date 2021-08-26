@@ -9,7 +9,7 @@ var careerIcons = document.querySelectorAll(".career_icon");
 var compressedPer = 0;
 
 if (myLocation === window.location.origin + "/aboutme/") {
-  if (window.innerWidth > 700) {
+  if (window.innerWidth > 1024 && window.innerHeight < window.innerWidth) {
     openCareerModal("0");
 
     document
@@ -31,7 +31,7 @@ if (myLocation === window.location.origin + "/aboutme/") {
 }
 
 function openCareerModal(cursor) {
-  if (window.innerWidth > 700) {
+  if (window.innerWidth > 1024 && window.innerHeight < window.innerWidth) {
     var itemSize = careerIconGroup.getBoundingClientRect().width * 0.1 - 13;
     var iconPercentage = [];
     for (var i = 0; i < careerIcons.length - 1; i++) {

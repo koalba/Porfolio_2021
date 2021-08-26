@@ -182,7 +182,7 @@ html {
   text-align: right;
 }
 
-#shuffle .shuffle_text p {
+#shuffle .shuffle_text > :is(.text-display, .text-title) {
   margin: 0;
 }
 
@@ -246,9 +246,9 @@ html {
   transition: all ease-in-out 0.2s;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
   #hero {
-    padding-top: 22%;
+    padding-top: 15%;
   }
 
   #hero .hero_image {
@@ -268,13 +268,14 @@ html {
   }
 
   #hero .text-jumbo {
-    margin-left: -0.25rem;
-    line-height: 4rem;
+    margin-left: -0.5rem;
+    line-height: 8rem;
   }
 
   #hero .text-display {
     line-height: 3rem;
     border-bottom: solid 7px;
+    margin-bottom: 0.5rem;
   }
 
   #hero .hero_title {
@@ -284,25 +285,24 @@ html {
     transform: translateX(-50%);
   }
 
-  #hero .hero_title span {
-    height: 25px;
-  }
-
   #hero .button {
     margin-top: var(--spacer-m);
   }
 
   /*--------------NEW PROJECTS---------------*/
 
-  #newProjects {
-    padding-top: var(--spacer-m);
-    position: relative;
+  #newProjects.grid {
+    grid-gap: var(--grid-gap);
+  }
+
+  #newProjects .col-3 {
+    grid-column: span 6;
   }
 
   /*--------------SHUFFLE---------------*/
 
   #shuffle {
-    padding-top: 20%;
+    padding-top: 15%;
   }
 
   #shuffle .shuffle_image {
@@ -318,16 +318,13 @@ html {
   }
 
   #shuffle .text-display {
-    line-height: 2.25rem;
+    line-height: 3.3rem;
     margin-right: 0;
+    margin-bottom: 0.5rem;
   }
 
   #shuffle .text-title {
     line-height: 1.75rem;
-  }
-
-  #shuffle .shuffle_title span {
-    height: 25px;
   }
 
   #shuffle .shuffle_title {
@@ -339,6 +336,66 @@ html {
 
   #shuffle .button {
     margin-top: var(--spacer-m);
+  }
+}
+
+@media only screen and (max-width: 900px) and (orientation: portrait) {
+  /*--------------NEW PROJECTS---------------*/
+  #newProjects.grid {
+    grid-gap: var(--grid-gap);
+  }
+
+  #newProjects .col-3 {
+    grid-column: span 5;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #hero {
+    padding-top: 22%;
+  }
+
+  #hero .text-jumbo {
+    margin-left: -0.25rem;
+    line-height: 4rem;
+  }
+
+  #hero .text-display {
+    line-height: 3rem;
+    border-bottom: solid 7px;
+  }
+
+  #hero .hero_title span {
+    height: 25px;
+  }
+
+  /*--------------NEW PROJECTS---------------*/
+
+  #newProjects {
+    padding-top: var(--spacer-m);
+    position: relative;
+  }
+
+  #newProjects.grid {
+    grid-gap: var(--grid-gap);
+  }
+
+  #newProjects .col-3 {
+    grid-column: span 3;
+  }
+
+  /*--------------SHUFFLE---------------*/
+
+  #shuffle {
+    padding-top: 20%;
+  }
+
+  #shuffle .text-display {
+    line-height: 2.25rem;
+  }
+
+  #shuffle .shuffle_title span {
+    height: 25px;
   }
 }
 

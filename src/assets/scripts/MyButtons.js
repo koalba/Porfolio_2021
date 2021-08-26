@@ -36,7 +36,7 @@ function checkLocation() {
       .querySelector(".aboutme_title")
       .addEventListener("click", openCareerPath, false);
 
-    if (window.innerWidth > 700) {
+    if (window.innerWidth > 1024 && window.innerHeight < window.innerWidth) {
       document.querySelectorAll(".career_icon").forEach(function (element) {
         element.addEventListener("click", openCareerLink, false);
       });

@@ -150,11 +150,97 @@
   background-color: var(--lighter-pink);
 }
 
-@media (max-width: 900px) {
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
   .myPorfolio_button {
     --porfolioButton-Size: 3vw;
     font-size: var(--porfolioButton-Size);
     line-height: var(--porfolioButton-Size);
+  }
+
+  #myPorfolio {
+    padding: var(--spacer-m) 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: var(--grid-main);
+    grid-template-columns: var(--grid-main);
+    grid-auto-rows: -webkit-min-content;
+    grid-auto-rows: min-content;
+    grid-gap: 0 var(--grid-gap);
+  }
+
+  .threeD-button {
+    margin: var(--spacer-s) 0;
+  }
+
+  .myPorfolio_button {
+    font-size: var(--text-title);
+    line-height: var(--text-title);
+  }
+
+  .twoD-button,
+  .threeD-button,
+  .web-button {
+    border-radius: 0;
+  }
+
+  #porfolio_type {
+    padding: var(--spacer-2xs) 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  #porfolio_type .myPorfolio_button {
+    font-size: var(--text-note);
+    font-weight: var(--extrabold);
+    line-height: var(--text-note);
+  }
+
+  #porfolio_type .myPorfolio_button p {
+    margin: 1rem 0;
+    line-height: var(--text-note);
+  }
+
+  #porfolio_type .active {
+    font-size: var(--text-note);
+    pointer-events: none;
+  }
+
+  #porfolio_type .web-button.active {
+    color: var(--blue);
+    background-color: var(--lighter-blue);
+  }
+
+  #porfolio_type .threeD-button.active {
+    color: var(--green);
+    background-color: var(--lighter-green);
+  }
+
+  #porfolio_type .twoD-button.active {
+    color: var(--pink);
+    background-color: var(--lighter-pink);
+  }
+
+  #porfolio_type .twoD-button:hover,
+  #porfolio_type .threeD-button:hover,
+  #porfolio_type .web-button:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    cursor: pointer;
+    -webkit-transition: all ease-in-out 0.1s;
+    -o-transition: all ease-in-out 0.1s;
+    transition: all ease-in-out 0.1s;
   }
 }
 
