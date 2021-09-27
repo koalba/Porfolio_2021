@@ -177,4 +177,32 @@ var misURL = [
     number: "28",
     img_sec: "_00.jpg",
   },
+  {
+    nombre: "Order Summary - Frontend Mentor",
+    theURL:
+      "https://www.frontendmentor.io/solutions/order-summary-card-5H2nW_TnQ",
+    number: "29",
+    img_sec: "_00.jpg",
+  },
+  {
+    nombre: "Tip Calculator - Frontend Mentor",
+    theURL:
+      "https://www.frontendmentor.io/solutions/frontend-mentor-tip-calculator-app-alba-g-XEMr478Fw",
+    number: "30",
+    img_sec: "_00.jpg",
+  },
+  {
+    nombre: "Time Tracking Dashboard - Frontend Mentor",
+    theURL:
+      "https://www.frontendmentor.io/solutions/time-tracking-dashboard-using-css-and-javascript-fSZgoCT5d",
+    number: "31",
+    img_sec: "_00.jpg/_01.jpg/_02.jpg",
+  },
+  {
+    nombre: "Sunnyside Agency Landing Page - Frontend Mentor",
+    theURL:
+      "https://www.frontendmentor.io/solutions/landing-page-with-css-and-javascript-NMctTAyTY",
+    number: "32",
+    img_sec: "_00.jpg/_01.jpg",
+  },
 ];

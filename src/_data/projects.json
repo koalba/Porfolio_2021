@@ -23,7 +23,7 @@
     "imagen": "02_Icon.jpg",
     "categoria": "threeD",
     "size": "rect",
-    "nov": "new",
+    "nov": "old",
     "num": "02"
   },
   {
@@ -32,7 +32,7 @@
     "imagen": "03_Icon.jpg",
     "categoria": "threeD",
     "size": "cuad",
-    "nov": "new",
+    "nov": "old",
     "num": "03"
   },
   {
@@ -68,7 +68,7 @@
     "imagen": "07_Icon.jpg",
     "categoria": "web",
     "size": "rect",
-    "nov": "new",
+    "nov": "old",
     "num": "07"
   },
   {
@@ -221,7 +221,7 @@
     "imagen": "24_Icon.jpg",
     "categoria": "twoD",
     "size": "cuad",
-    "nov": "new",
+    "nov": "old",
     "num": "24"
   },
   {
@@ -259,5 +259,41 @@
     "size": "cuad",
     "nov": "old",
     "num": "28"
+  },
+  {
+    "nombre": "Order Summary - Frontend Mentor",
+    "pre": "Projects/29/",
+    "imagen": "29_Icon.jpg",
+    "categoria": "web",
+    "size": "cuad",
+    "nov": "new",
+    "num": "29"
+  },
+  {
+    "nombre": "Tip Calculator - Frontend Mentor",
+    "pre": "Projects/30/",
+    "imagen": "30_Icon.jpg",
+    "categoria": "web",
+    "size": "rect",
+    "nov": "new",
+    "num": "30"
+  },
+  {
+    "nombre": "Time Tracking Dashboard - Frontend Mentor",
+    "pre": "Projects/31/",
+    "imagen": "31_Icon.jpg",
+    "categoria": "web",
+    "size": "rect",
+    "nov": "new",
+    "num": "31"
+  },
+  {
+    "nombre": "Sunnyside Agency Landing Page - Frontend Mentor",
+    "pre": "Projects/32/",
+    "imagen": "32_Icon.jpg",
+    "categoria": "web",
+    "size": "rect",
+    "nov": "new",
+    "num": "32"
   }
 ]
