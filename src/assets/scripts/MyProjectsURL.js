@@ -196,7 +196,7 @@ var misURL = [
     theURL:
       "https://www.frontendmentor.io/solutions/time-tracking-dashboard-using-css-and-javascript-fSZgoCT5d",
     number: "31",
-    img_sec: "_00.jpg/_01.jpg/_02.jpg",
+    img_sec: "_00.jpg/_01.jpg",
   },
   {
     nombre: "Sunnyside Agency Landing Page - Frontend Mentor",
